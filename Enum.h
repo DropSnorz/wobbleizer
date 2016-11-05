@@ -1,0 +1,60 @@
+#pragma once
+enum SyncedQuantization{
+
+	BAR_8D = 0,
+	BAR_8,
+	BAR_4D,
+	BAR_8T,
+	BAR_4,
+	BAR_2D,
+	BAR_4T,
+	BAR_2,
+	BAR_1D,
+	BAR_2T,
+	BAR_1,
+	BAR_1_2D,
+	BAR_1T,
+	BAR_1_2,
+	BAR_1_4D,
+	BAR_1_2T,
+	BAR_1_4,
+	BAR_1_8D,
+	BAR_1_4T,
+	BAR_1_8,
+	BAR_1_16D,
+	BAR_1_8T,
+	BAR_1_16,
+	BAR_1_32D,
+	BAR_1_16T,
+	BAR_1_32,
+	BAR_1_64D,
+	BAR_1_32T,
+	BAR_1_64,
+	kNumSyncedQuantization
+};
+enum RearmQuantization{
+
+	R_NONE = 0,
+	R_BAR_8,
+	R_BAR_8T,
+	R_BAR_4,
+	R_BAR_4T,
+	R_BAR_2,
+	R_BAR_2T,
+	R_BAR_1,
+	R_BAR_1T,
+	R_BAR_1_2,
+	R_BAR_1_2T,
+	R_BAR_1_4,
+	R_BAR_1_4T,
+	R_BAR_1_8,
+	R_BAR_1_8T,
+	R_BAR_1_16,
+	R_BAR_1_16T,
+	R_BAR_1_32,
+	R_BAR_1_32T,
+	R_BAR_1_64,
+	kNumRearmQuantization
+
+};
+

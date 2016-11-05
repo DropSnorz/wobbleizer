@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="app">
+      <UniqueIdentifier>{6a6c24bd-7110-4436-97af-07990da17abf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app\RtAudioMidi">
+      <UniqueIdentifier>{ef87c677-1479-44bc-aef8-7ba960ef233d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app\ASIO_SDK">
+      <UniqueIdentifier>{b91b9db4-5584-4959-a395-7394ba3cf5a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controls">
+      <UniqueIdentifier>{37900134-7456-48a9-8e16-94b824567f7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RBJ Biquad">
+      <UniqueIdentifier>{af7b99b8-10b5-4a13-bfa2-7964da6bc58b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="app_wrapper\app_main.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Wobbleizer.h" />
+    <ClInclude Include="app_wrapper\app_resource.h" />
+    <ClInclude Include="Oscillator.h" />
+    <ClInclude Include="Enum.h" />
+    <ClInclude Include="ParameterPrinterControl.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugPanelControl.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="RearmClock.h" />
+    <ClInclude Include="Biquad.h">
+      <Filter>RBJ Biquad</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>RBJ Biquad</Filter>
+    </ClInclude>
+    <ClInclude Include="RBJ.h">
+      <Filter>RBJ Biquad</Filter>
+    </ClInclude>
+    <ClInclude Include="MathSupplement.h">
+      <Filter>RBJ Biquad</Filter>
+    </ClInclude>
+    <ClInclude Include="FilterControler.h" />
+    <ClInclude Include="Filter.h">
+      <Filter>RBJ Biquad</Filter>
+    </ClInclude>
+    <ClInclude Include="Design.h">
+      <Filter>RBJ Biquad</Filter>
+    </ClInclude>
+    <ClInclude Include="Params.h">
+      <Filter>RBJ Biquad</Filter>
+    </ClInclude>
+    <ClInclude Include="Types.h">
+      <Filter>RBJ Biquad</Filter>
+    </ClInclude>
+    <ClInclude Include="SmoothedFilter.h">
+      <Filter>RBJ Biquad</Filter>
+    </ClInclude>
+    <ClInclude Include="State.h">
+      <Filter>RBJ Biquad</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectRack.h" />
+    <ClInclude Include="..\wdl-ol\ASIO_SDK\asio.h">
+      <Filter>app\ASIO_SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\wdl-ol\ASIO_SDK\asiodrivers.h">
+      <Filter>app\ASIO_SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\wdl-ol\ASIO_SDK\asiolist.h">
+      <Filter>app\ASIO_SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\wdl-ol\ASIO_SDK\asiosys.h">
+      <Filter>app\ASIO_SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\wdl-ol\ASIO_SDK\ginclude.h">
+      <Filter>app\ASIO_SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\wdl-ol\ASIO_SDK\iasiodrv.h">
+      <Filter>app\ASIO_SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\wdl-ol\WDL\rtaudiomidi\RtAudio.h">
+      <Filter>app\RtAudioMidi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\wdl-ol\WDL\rtaudiomidi\RtError.h">
+      <Filter>app\RtAudioMidi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\wdl-ol\WDL\rtaudiomidi\RtMidi.h">
+      <Filter>app\RtAudioMidi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\wdl-ol\WDL\IPlug\IPlugStandalone.h">
+      <Filter>app</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="app_wrapper\app_dialog.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="app_wrapper\app_main.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="Wobbleizer.cpp" />
+    <ClCompile Include="Oscillator.cpp" />
+    <ClCompile Include="Enum.cpp" />
+    <ClCompile Include="ParameterPrinterControl.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugPanelControl.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="RearmClock.cpp" />
+    <ClCompile Include="Biquad.cpp">
+      <Filter>RBJ Biquad</Filter>
+    </ClCompile>
+    <ClCompile Include="RBJ.cpp">
+      <Filter>RBJ Biquad</Filter>
+    </ClCompile>
+    <ClCompile Include="FilterControler.cpp" />
+    <ClCompile Include="Filter.cpp">
+      <Filter>RBJ Biquad</Filter>
+    </ClCompile>
+    <ClCompile Include="Design.cpp">
+      <Filter>RBJ Biquad</Filter>
+    </ClCompile>
+    <ClCompile Include="Param.cpp">
+      <Filter>RBJ Biquad</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectRack.cpp" />
+    <ClCompile Include="..\wdl-ol\ASIO_SDK\asio.cpp">
+      <Filter>app\ASIO_SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\wdl-ol\ASIO_SDK\asiodrivers.cpp">
+      <Filter>app\ASIO_SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\wdl-ol\ASIO_SDK\asiolist.cpp">
+      <Filter>app\ASIO_SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\wdl-ol\WDL\rtaudiomidi\RtAudio.cpp">
+      <Filter>app\RtAudioMidi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\wdl-ol\WDL\rtaudiomidi\RtMidi.cpp">
+      <Filter>app\RtAudioMidi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\wdl-ol\WDL\IPlug\IPlugStandalone.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Wobbleizer.rc" />
+  </ItemGroup>
+</Project>
