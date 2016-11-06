@@ -37,7 +37,6 @@ double EffectRack::Saturator(double input){
 		return input;
 	}
 	else if (input >= saturatorCoef){
-		// a + (x-a)/(1+((x-a)/(1-a))^2)
 		return saturatorCoef + ((input - saturatorCoef) / (1.0 + pow((input - saturatorCoef) / (1.0 - saturatorCoef), 2)));
 	}
 	else{
@@ -58,7 +57,6 @@ double EffectRack::BassBooster(double input){
 	input = quickSaturate((input + cap*ratio)*gain2);
 
 	return input;
-
 
 }
 

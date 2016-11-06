@@ -50,14 +50,10 @@ double** FilterControler::process(double** inputs, int nframes){
 
 void FilterControler::setCutoff(double newCutoff){
 
-
 	cutoff = newCutoff;
-
-
 }
 
 void FilterControler::setCutoffMod(double newCutoffMod){
-
 
 	cutoffMod = newCutoffMod;
 
@@ -66,7 +62,6 @@ void FilterControler::setCutoffMod(double newCutoffMod){
 void FilterControler::setResonance(double newResonance){
 
 	resonance = newResonance;
-
 
 	lowPassFilter->setParam(2, resonance);
 	lowPassFilterSO->setParam(2, resonance);
@@ -84,11 +79,8 @@ void FilterControler::setSampleRate(double newSampleRate){
 }
 
 void FilterControler::setCutoffFromFrequency(double frequency){
-
 	
 	cutoff = ((frequency - 20) / (20000 - 20));
-
-
 }
 
 void FilterControler::initBiquadFilter(){

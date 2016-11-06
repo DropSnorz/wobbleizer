@@ -34,26 +34,21 @@ public:
 	inline void setFilterMode(FilterMode newMode) { mode = newMode; };
 	inline double getCutoffMod(){ return cutoffMod; };
 
-
 	void setCutoffMod(double newCutoffMod);
 
-	 double getCalculatedCutoff() {
-		 //double relatedCutoff = pow(cutoff, 1 / 4.1634);
-		 double relatedCutoff = cutoff;
-		 double calculatedCutoff;
+	double getCalculatedCutoff() {
+		double relatedCutoff = cutoff;
+		double calculatedCutoff;
 		calculatedCutoff = fmax(fmin(relatedCutoff + cutoffMod, 0.99999), 0.00001);
 		calculatedCutoff = calculatedCutoff;
 		return calculatedCutoff;
 		//return 0.0001 + pow(calculatedCutoff, 4.1634) * (0.9999 - 0.0001);
-
 		//return fmin(0.5*pow(calculatedCutoff, 20000 + 1)*sampleRate + 20, 0.5*sampleRate);
 	};
 
 	 double getCalculatedCutoffFrequency() {
+
 		double calculatedCutoff = getCalculatedCutoff();
-
-		//return calculatedCutoff;
-
 		double curve = pow(calculatedCutoff, 4.1634);
 
 		return 20 + (curve * (20000 - 20));
@@ -63,13 +58,9 @@ public:
 	 double getCutoffFrequency(){
 
 		 double curve = pow(cutoff, 4.1634);
-
 		 return 20 + (curve * (20000 - 20));
 
 	 }
-
-
-
 private:
 	double cutoff;
 	double resonance;

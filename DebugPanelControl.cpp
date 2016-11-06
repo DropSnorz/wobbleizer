@@ -9,10 +9,6 @@ DebugPanelControl::DebugPanelControl(IPlugBase* pPlug, int x, int y, IBitmap* pB
 	text = new ITextControl(pPlug, textRect, &textProperty, "");
 	strcpy(strDebug, "\n\0");
 }
-DebugPanelControl::~DebugPanelControl()
-{
-	//remove text
-}
 
 void DebugPanelControl::Print(char* str){
 
@@ -28,15 +24,15 @@ void DebugPanelControl::updateStr(){
 	int c, nbLine = 0;
 	char newDebug[5000];
 	char *token;
-	int size = strlen(strDebug);    // taille de la chaine
+	int size = strlen(strDebug);
 
+	//line counts
+	nbLine = 1;
 	for (c = 0; c < size; c++)
 	{
-		if (strDebug[c] == '\n') // si le caractère n° c est bien le caractère
-			nbLine++;         // on incrémente le compteur
+		if (strDebug[c] == '\n')
+			nbLine++;          
 	}
-
-	nbLine = nbLine + 1;
 
 	if (nbLine >= 15){
 		strcpy(newDebug, "\0");
@@ -53,14 +49,12 @@ void DebugPanelControl::updateStr(){
 		}
 
 		strcpy(strDebug, newDebug);
-
 	}
 
 }
 
 bool DebugPanelControl::IsDirty(){
 	 return (text->IsDirty()); 
-	//return false;
 }
 
 bool DebugPanelControl::Draw(IGraphics* pGraphics){
@@ -76,6 +70,11 @@ bool DebugPanelControl::Draw(IGraphics* pGraphics){
 	 }
 
 	 return true;
+}
+
+DebugPanelControl::~DebugPanelControl()
+{
+	// TODO free pointers
 }
 
 

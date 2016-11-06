@@ -18,11 +18,6 @@ ParameterPrinterControl::ParameterPrinterControl(IPlugBase *pPlug, IRECT pR, con
 
 }
 
-ParameterPrinterControl::~ParameterPrinterControl()
-{
-	//TODO delete text control;
-}
-
 void ParameterPrinterControl::SetParameterPairText(char* parameterName, char* parameterValue){
 	SetParameterNameText(parameterName);
 	SetParameterValueText(parameterValue);
@@ -52,4 +47,9 @@ bool ParameterPrinterControl::Draw(IGraphics* pGraphics)
 	return (pGraphics->DrawIText(mTextName, mDisplayName.Get(), mRECTName) && pGraphics->DrawIText(mTextValue, mDisplayValue.Get(), mRECTValue));
 
 	return true;
+}
+
+ParameterPrinterControl::~ParameterPrinterControl()
+{
+	//TODO delete text control;
 }

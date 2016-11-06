@@ -2,9 +2,6 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="Wobbleizer.cpp" />
-    <ClCompile Include="..\..\WDL\IPlug\IPlugVST.cpp">
-      <Filter>vst2</Filter>
-    </ClCompile>
     <ClCompile Include="Filter.cpp" />
     <ClCompile Include="Oscillator.cpp" />
     <ClCompile Include="ParameterPrinterControl.cpp" />
@@ -16,13 +13,13 @@
     <ClCompile Include="Param.cpp" />
     <ClCompile Include="RBJ.cpp" />
     <ClCompile Include="EffectRack.cpp" />
+    <ClCompile Include="..\wdl-ol\WDL\IPlug\IPlugVST.cpp">
+      <Filter>vst2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Wobbleizer.h" />
     <ClInclude Include="resource.h" />
-    <ClInclude Include="..\..\WDL\IPlug\IPlugVST.h">
-      <Filter>vst2</Filter>
-    </ClInclude>
     <ClInclude Include="Filter.h" />
     <ClInclude Include="Oscillator.h" />
     <ClInclude Include="Enum.h" />
@@ -40,6 +37,9 @@
     <ClInclude Include="State.h" />
     <ClInclude Include="Types.h" />
     <ClInclude Include="EffectRack.h" />
+    <ClInclude Include="..\wdl-ol\WDL\IPlug\IPlugVST.h">
+      <Filter>vst2</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Wobbleizer.rc" />

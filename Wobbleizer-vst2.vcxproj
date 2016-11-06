@@ -235,7 +235,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\WDL\IPlug\IPlugVST.h" />
+    <ClInclude Include="..\wdl-ol\WDL\IPlug\IPlugVST.h" />
     <ClInclude Include="Biquad.h" />
     <ClInclude Include="Common.h" />
     <ClInclude Include="DebugPanelControl.h" />
@@ -257,7 +257,7 @@
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\WDL\IPlug\IPlugVST.cpp" />
+    <ClCompile Include="..\wdl-ol\WDL\IPlug\IPlugVST.cpp" />
     <ClCompile Include="Biquad.cpp" />
     <ClCompile Include="DebugPanelControl.cpp" />
     <ClCompile Include="Design.cpp" />

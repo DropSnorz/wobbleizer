@@ -8,17 +8,9 @@ RearmClock::RearmClock() : nextTime(0.0), previousTime(0.0), mBeatIncrement(1),m
 
 bool RearmClock::getNeedRearm(double time){
 
-
 	if (mEnabled == false){
 		return false;
 	}
-	
-
-	/*if (time > nextTime){
-		nextTime = time + mBeatIncrement;
-		return true;
-	}
-	*/
 
 	double result = fmod(time, mBeatIncrement);
 	if (result < 0.05 && !(previousTime<0.05))

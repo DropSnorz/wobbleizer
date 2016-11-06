@@ -254,14 +254,7 @@ void Wobbleizer::ProcessDoubleReplacing(double** inputs, double** outputs, int n
 	double* leftOutput = outputs[0];
 	double* rightOutput = outputs[1];
 
-	double currentTempo = GetTempo();
-	if (currentTempo != mLFO.getTempo()){
-		mLFO.setTempo(currentTempo);
-	}
-	ITimeInfo* ti = new ITimeInfo();
-	GetTime(ti);
-	
-	double tivalue = ti->mPPQPos;
+	//Debug prints
 	char strti[20];
 	char finalStrTi[400];
 	strcpy(finalStrTi, ">PROCESS AUDIO CORE [frequency]");
@@ -270,38 +263,38 @@ void Wobbleizer::ProcessDoubleReplacing(double** inputs, double** outputs, int n
 
 	debugPanel->Print(finalStrTi);
 
+	// LFO and rearm control update
+	double currentTempo = GetTempo();
+	if (currentTempo != mLFO.getTempo()){
+		mLFO.setTempo(currentTempo);
+	}
+
+	ITimeInfo* ti = new ITimeInfo();
+	GetTime(ti);
+	double tivalue = ti->mPPQPos;
+
 	mRearmClock.setTempo(currentTempo);
 	if (mRearmClock.getNeedRearm(tivalue)){
 		debugPanel->Print(">AUDIO CORE : LFO PHASE REARMED");
 		mLFO.resetPhase();
 	}
 	
-	//outputs = mFilter.process(inputs,nFrames);
-
+	//GUI update
 	GetGUI()->SetParameterFromPlug(kGraphicLFOFeedback, mFilter.getCalculatedCutoffFrequency(), false);
 
-
+	//Split audio to small buffers and process them
 	int splitSize = 256;
-
-
 	double lfoFilterModulation;
-
-
 	
 	if (nFrames <= splitSize){
 
 		for (int s = 0; s < nFrames; s++){
 
 			lfoFilterModulation = mLFO.nextSample() * mLFOFilterModAmount;
-
 		}
 
-		
 		mFilter.setCutoffMod(lfoFilterModulation);
-
 		mFilter.process(inputs, nFrames);
-
-
 	}
 	else{
 
@@ -309,18 +302,13 @@ void Wobbleizer::ProcessDoubleReplacing(double** inputs, double** outputs, int n
 		int count = 0;
 
 		while (remainingSamples >= splitSize){
-
-
 			for (int s = 0; s < splitSize; s++){
 
 				lfoFilterModulation = mLFO.nextSample() * mLFOFilterModAmount;
 
-
 			}
 
-			
 			mFilter.setCutoffMod(lfoFilterModulation);
-
 
 			double** currentInput = (double**) malloc(2*sizeof(double**));
 			currentInput[0] = inputs[0] + (count*splitSize);
@@ -331,20 +319,14 @@ void Wobbleizer::ProcessDoubleReplacing(double** inputs, double** outputs, int n
 			remainingSamples = remainingSamples - splitSize;
 			count = count + 1;
 
-
-
 			free(currentInput);
-
 		}
 
 		if (remainingSamples > 0){
 
-
 			for (int s = 0; s < remainingSamples; s++){
 
 				lfoFilterModulation = mLFO.nextSample() * mLFOFilterModAmount;
-
-
 			}
 
 			mFilter.setCutoffMod(lfoFilterModulation);
@@ -361,32 +343,6 @@ void Wobbleizer::ProcessDoubleReplacing(double** inputs, double** outputs, int n
 		leftOutput[s] = inputs[0][s];
 		rightOutput[s] = inputs[1][s];
 	}
-
-
-	
-	/*
-	std::thread t1(&Wobbleizer::ApplyFilter, this, inputs, outputs, nFrames);
-	
-	
-	for (int s = 0; s < nFrames; ++s) {
-
-		double lfoFilterModulation = mLFO.nextSample() * mLFOFilterModAmount;
-		mFilter.setCutoffMod(lfoFilterModulation);
-
-		//leftOutput[s] = mEffectRack.Fatter(outputs[0][s]);
-		//rightOutput[s] = mEffectRack.Fatter(outputs[1][s]);
-	}
-
-
-	t1.join();
-
-
-	for (int s = 0; s < nFrames; ++s){
-		leftOutput[s] = inputs[0][s];
-		rightOutput[s] = inputs[1][s];
-	}
-
-	*/
 	free(ti);
 }
 
@@ -402,8 +358,6 @@ void Wobbleizer::Reset()
 
 void Wobbleizer::OnParamChange(int paramIdx)
 {
-
-
 	IMutexLock lock(this);
 	double mod;
 	switch (paramIdx)
@@ -497,38 +451,32 @@ void Wobbleizer::OnParamChange(int paramIdx)
   }
 
 
-	
-  char valueDisplay[50] = "";
+	// Parameter printer update
+	char valueDisplay[50] = "";
+	int lastClickedId = paramIdx;
+	int tempIdx = GetGUI()->GetLastClickedParam();
+	if (tempIdx >= 0){
 
-  int lastClickedId = paramIdx;
+		lastClickedId = tempIdx;
+	}
 
-  
-  int tempIdx = GetGUI()->GetLastClickedParam();
-
-  if (tempIdx >= 0){
-
-	  lastClickedId = tempIdx;
-  }
-
-  if (lastClickedId == kFilterCutoff){
-	  sprintf(valueDisplay, "%d", (int)mFilter.getCutoffFrequency());
-  }
-  else{
-	  GetParam(lastClickedId)->GetDisplayForHost(valueDisplay);
-  }
-  char nameDisplay[100];
-  strcpy(nameDisplay, GetParam(lastClickedId)->GetNameForHost());
-  parameterPrinter->SetParameterPairText(nameDisplay, valueDisplay);
+	if (lastClickedId == kFilterCutoff){
+		sprintf(valueDisplay, "%d", (int)mFilter.getCutoffFrequency());
+	}
+	else{
+		GetParam(lastClickedId)->GetDisplayForHost(valueDisplay);
+	}
+	char nameDisplay[100];
+	strcpy(nameDisplay, GetParam(lastClickedId)->GetNameForHost());
+	parameterPrinter->SetParameterPairText(nameDisplay, valueDisplay);
 
 
-
-  char debugText[200];
-  strcpy(debugText, ">PARAMETER UPDATE: ");
-  strcat(debugText, GetParam(paramIdx)->GetNameForHost());
-  strcat(debugText, " VALUE ");
-  strcat(debugText, valueDisplay);
-  debugPanel->Print(debugText);
-
-  
+	//DebugPrinter update
+	char debugText[200];
+	strcpy(debugText, ">PARAMETER UPDATE: ");
+	strcat(debugText, GetParam(paramIdx)->GetNameForHost());
+	strcat(debugText, " VALUE ");
+	strcat(debugText, valueDisplay);
+	debugPanel->Print(debugText);
 
 }

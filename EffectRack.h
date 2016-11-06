@@ -14,7 +14,6 @@ public:
 private:
 
 	double mEffectValue;
-	
 	double quickSaturate(double input);
 
 };
