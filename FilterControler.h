@@ -1,7 +1,6 @@
 #include <math.h>
-#include "Filter.h"
-#include "RBJ.h"
-#include "SmoothedFilter.h"
+#include "DspFilters/Dsp.h"
+
 class FilterControler {
 public:
 	enum FilterMode {

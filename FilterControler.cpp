@@ -24,7 +24,7 @@ double** FilterControler::process(double** inputs, int nframes){
 
 	double currentCutoff = getCalculatedCutoffFrequency();
 	lowPassFilter->setParam(1, currentCutoff);
-	lowPassFilterSO->setParam(1, currentCutoff);
+	//lowPassFilterSO->setParam(1, currentCutoff);
 	highPassFilter->setParam(1, currentCutoff);
 	bandPassFilter->setParam(1, currentCutoff);
 
@@ -32,7 +32,7 @@ double** FilterControler::process(double** inputs, int nframes){
 	switch (mode){
 	case FILTER_MODE_LOWPASS:
 		lowPassFilter->process(nframes,inputs);
-		lowPassFilterSO->process(nframes, inputs);
+		//lowPassFilterSO->process(nframes, inputs);
 		break;
 	case FILTER_MODE_HIGHPASS:
 		highPassFilter->process(nframes, inputs);
@@ -85,11 +85,19 @@ void FilterControler::setCutoffFromFrequency(double frequency){
 
 void FilterControler::initBiquadFilter(){
 
-	lowPassFilter = new Dsp::SmoothedFilterDesign <Dsp::RBJ::Design::LowPass, 2>(1024);
+
+	/*lowPassFilter = new Dsp::SmoothedFilterDesign <Dsp::ChebyshevI::Design::LowPass<2>, 2 >(1024);
+	highPassFilter = new Dsp::SmoothedFilterDesign <Dsp::ChebyshevI::Design::HighPass<2>, 2>(1024);
+	bandPassFilter = new Dsp::SmoothedFilterDesign <Dsp::ChebyshevI::Design::BandPass<2>, 2>(1024);
+
+	*/
+
+	
 	lowPassFilterSO = new Dsp::SmoothedFilterDesign < Dsp::RBJ::Design::LowPass, 2>(1024);
 	highPassFilter = new Dsp::SmoothedFilterDesign <Dsp::RBJ::Design::HighPass, 2>(1024);
 	bandPassFilter = new Dsp::SmoothedFilterDesign <Dsp::RBJ::Design::BandPass2, 2>(1024);
-
+	lowPassFilter = new Dsp::SmoothedFilterDesign <Dsp::RBJ::Design::LowPass, 2>(1024);
+	
 	Dsp::Params params;
 
 	params[0] = sampleRate;

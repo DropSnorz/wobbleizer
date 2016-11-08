@@ -38,7 +38,6 @@ THE SOFTWARE.
 
 #include "Common.h"
 #include "Filter.h"
-#include <algorithm>
 
 namespace Dsp {
 

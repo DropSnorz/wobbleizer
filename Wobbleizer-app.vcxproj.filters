@@ -13,7 +13,7 @@
     <Filter Include="Controls">
       <UniqueIdentifier>{37900134-7456-48a9-8e16-94b824567f7d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="RBJ Biquad">
+    <Filter Include="DSPFilters">
       <UniqueIdentifier>{af7b99b8-10b5-4a13-bfa2-7964da6bc58b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -33,37 +33,7 @@
       <Filter>Controls</Filter>
     </ClInclude>
     <ClInclude Include="RearmClock.h" />
-    <ClInclude Include="Biquad.h">
-      <Filter>RBJ Biquad</Filter>
-    </ClInclude>
-    <ClInclude Include="Common.h">
-      <Filter>RBJ Biquad</Filter>
-    </ClInclude>
-    <ClInclude Include="RBJ.h">
-      <Filter>RBJ Biquad</Filter>
-    </ClInclude>
-    <ClInclude Include="MathSupplement.h">
-      <Filter>RBJ Biquad</Filter>
-    </ClInclude>
     <ClInclude Include="FilterControler.h" />
-    <ClInclude Include="Filter.h">
-      <Filter>RBJ Biquad</Filter>
-    </ClInclude>
-    <ClInclude Include="Design.h">
-      <Filter>RBJ Biquad</Filter>
-    </ClInclude>
-    <ClInclude Include="Params.h">
-      <Filter>RBJ Biquad</Filter>
-    </ClInclude>
-    <ClInclude Include="Types.h">
-      <Filter>RBJ Biquad</Filter>
-    </ClInclude>
-    <ClInclude Include="SmoothedFilter.h">
-      <Filter>RBJ Biquad</Filter>
-    </ClInclude>
-    <ClInclude Include="State.h">
-      <Filter>RBJ Biquad</Filter>
-    </ClInclude>
     <ClInclude Include="EffectRack.h" />
     <ClInclude Include="..\wdl-ol\ASIO_SDK\asio.h">
       <Filter>app\ASIO_SDK</Filter>
@@ -95,6 +65,75 @@
     <ClInclude Include="..\wdl-ol\WDL\IPlug\IPlugStandalone.h">
       <Filter>app</Filter>
     </ClInclude>
+    <ClInclude Include="DspFilters\Bessel.h">
+      <Filter>DSPFilters</Filter>
+    </ClInclude>
+    <ClInclude Include="DspFilters\Biquad.h">
+      <Filter>DSPFilters</Filter>
+    </ClInclude>
+    <ClInclude Include="DspFilters\Butterworth.h">
+      <Filter>DSPFilters</Filter>
+    </ClInclude>
+    <ClInclude Include="DspFilters\Cascade.h">
+      <Filter>DSPFilters</Filter>
+    </ClInclude>
+    <ClInclude Include="DspFilters\ChebyshevI.h">
+      <Filter>DSPFilters</Filter>
+    </ClInclude>
+    <ClInclude Include="DspFilters\ChebyshevII.h">
+      <Filter>DSPFilters</Filter>
+    </ClInclude>
+    <ClInclude Include="DspFilters\Common.h">
+      <Filter>DSPFilters</Filter>
+    </ClInclude>
+    <ClInclude Include="DspFilters\Custom.h">
+      <Filter>DSPFilters</Filter>
+    </ClInclude>
+    <ClInclude Include="DspFilters\Design.h">
+      <Filter>DSPFilters</Filter>
+    </ClInclude>
+    <ClInclude Include="DspFilters\Dsp.h">
+      <Filter>DSPFilters</Filter>
+    </ClInclude>
+    <ClInclude Include="DspFilters\Elliptic.h">
+      <Filter>DSPFilters</Filter>
+    </ClInclude>
+    <ClInclude Include="DspFilters\Filter.h">
+      <Filter>DSPFilters</Filter>
+    </ClInclude>
+    <ClInclude Include="DspFilters\Layout.h">
+      <Filter>DSPFilters</Filter>
+    </ClInclude>
+    <ClInclude Include="DspFilters\Legendre.h">
+      <Filter>DSPFilters</Filter>
+    </ClInclude>
+    <ClInclude Include="DspFilters\MathSupplement.h">
+      <Filter>DSPFilters</Filter>
+    </ClInclude>
+    <ClInclude Include="DspFilters\Params.h">
+      <Filter>DSPFilters</Filter>
+    </ClInclude>
+    <ClInclude Include="DspFilters\PoleFilter.h">
+      <Filter>DSPFilters</Filter>
+    </ClInclude>
+    <ClInclude Include="DspFilters\RBJ.h">
+      <Filter>DSPFilters</Filter>
+    </ClInclude>
+    <ClInclude Include="DspFilters\RootFinder.h">
+      <Filter>DSPFilters</Filter>
+    </ClInclude>
+    <ClInclude Include="DspFilters\SmoothedFilter.h">
+      <Filter>DSPFilters</Filter>
+    </ClInclude>
+    <ClInclude Include="DspFilters\State.h">
+      <Filter>DSPFilters</Filter>
+    </ClInclude>
+    <ClInclude Include="DspFilters\Types.h">
+      <Filter>DSPFilters</Filter>
+    </ClInclude>
+    <ClInclude Include="DspFilters\Utilities.h">
+      <Filter>DSPFilters</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="app_wrapper\app_dialog.cpp">
@@ -113,22 +152,7 @@
       <Filter>Controls</Filter>
     </ClCompile>
     <ClCompile Include="RearmClock.cpp" />
-    <ClCompile Include="Biquad.cpp">
-      <Filter>RBJ Biquad</Filter>
-    </ClCompile>
-    <ClCompile Include="RBJ.cpp">
-      <Filter>RBJ Biquad</Filter>
-    </ClCompile>
     <ClCompile Include="FilterControler.cpp" />
-    <ClCompile Include="Filter.cpp">
-      <Filter>RBJ Biquad</Filter>
-    </ClCompile>
-    <ClCompile Include="Design.cpp">
-      <Filter>RBJ Biquad</Filter>
-    </ClCompile>
-    <ClCompile Include="Param.cpp">
-      <Filter>RBJ Biquad</Filter>
-    </ClCompile>
     <ClCompile Include="EffectRack.cpp" />
     <ClCompile Include="..\wdl-ol\ASIO_SDK\asio.cpp">
       <Filter>app\ASIO_SDK</Filter>
@@ -147,6 +171,54 @@
     </ClCompile>
     <ClCompile Include="..\wdl-ol\WDL\IPlug\IPlugStandalone.cpp">
       <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="DspFilters\Bessel.cpp">
+      <Filter>DSPFilters</Filter>
+    </ClCompile>
+    <ClCompile Include="DspFilters\Biquad.cpp">
+      <Filter>DSPFilters</Filter>
+    </ClCompile>
+    <ClCompile Include="DspFilters\Butterworth.cpp">
+      <Filter>DSPFilters</Filter>
+    </ClCompile>
+    <ClCompile Include="DspFilters\Cascade.cpp">
+      <Filter>DSPFilters</Filter>
+    </ClCompile>
+    <ClCompile Include="DspFilters\ChebyshevI.cpp">
+      <Filter>DSPFilters</Filter>
+    </ClCompile>
+    <ClCompile Include="DspFilters\ChebyshevII.cpp">
+      <Filter>DSPFilters</Filter>
+    </ClCompile>
+    <ClCompile Include="DspFilters\Custom.cpp">
+      <Filter>DSPFilters</Filter>
+    </ClCompile>
+    <ClCompile Include="DspFilters\Design.cpp">
+      <Filter>DSPFilters</Filter>
+    </ClCompile>
+    <ClCompile Include="DspFilters\Elliptic.cpp">
+      <Filter>DSPFilters</Filter>
+    </ClCompile>
+    <ClCompile Include="DspFilters\Filter.cpp">
+      <Filter>DSPFilters</Filter>
+    </ClCompile>
+    <ClCompile Include="DspFilters\Legendre.cpp">
+      <Filter>DSPFilters</Filter>
+    </ClCompile>
+    <ClCompile Include="DspFilters\Param.cpp">
+      <Filter>DSPFilters</Filter>
+    </ClCompile>
+    <ClCompile Include="DspFilters\PoleFilter.cpp">
+      <Filter>DSPFilters</Filter>
+    </ClCompile>
+    <ClCompile Include="DspFilters\RBJ.cpp">
+      <Filter>DSPFilters</Filter>
+    </ClCompile>
+    <ClCompile Include="DspFilters\RootFinder.cpp">
+      <Filter>DSPFilters</Filter>
+    </ClCompile>
+    <ClCompile Include="DspFilters\State.cpp">
+      <Filter>DSPFilters</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

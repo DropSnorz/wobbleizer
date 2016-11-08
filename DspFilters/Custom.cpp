@@ -33,34 +33,34 @@ THE SOFTWARE.
 
 *******************************************************************************/
 
-#ifndef DSPFILTERS_COMMON_H
-#define DSPFILTERS_COMMON_H
+#include "Common.h"
+#include "Custom.h"
 
-//
-// This must be the first file included in every DspFilters header and source
-//
+namespace Dsp {
 
-#ifdef _MSC_VER
-#  pragma warning (disable: 4100)
-#endif
+namespace Custom {
 
-//#include <assert.h>
-#include <stdlib.h>
+void OnePole::setup (double scale,
+                     double pole,
+                     double zero)
+{
+  setOnePole (pole, zero);
+  applyScale (scale);
+}
 
-#include <cassert>
-#include <cfloat>
-#include <cmath>
-#include <complex>
-#include <cstring>
-#include <string>
-#include <limits>
-#include <vector>
+void TwoPole::setup (double scale,
+                     double poleRho,
+                     double poleTheta,
+                     double zeroRho,
+                     double zeroTheta)
+{
+  complex_t pole = std::polar (poleRho, poleTheta);
+  complex_t zero = std::polar (zeroRho, zeroTheta);
 
-#ifdef _MSC_VER
-namespace tr1 = std::tr1;
-#else
-namespace tr1 = std;
-#endif
+  setTwoPole (pole, zero, std::conj(pole), std::conj(zero));
+  applyScale (scale);
+}
 
+}
 
-#endif
+}
