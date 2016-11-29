@@ -1,5 +1,7 @@
 #include <math.h>
-#include "DspFilters/Dsp.h"
+#include "DspFilters/SmoothedFilter.h"
+#include "DspFilters/RBJ.h"
+//#include "DspFilters/Dsp.h"
 
 class FilterControler {
 public:

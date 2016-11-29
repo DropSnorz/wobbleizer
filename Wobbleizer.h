@@ -7,6 +7,7 @@
 #include "Oscillator.h"
 #include "RearmClock.h"
 #include "Enum.h"
+#include "Fattner.h"
 #include "EffectRack.h"
 #include"ParameterPrinterControl.h"
 #include "DebugPanelControl.h"
@@ -26,6 +27,7 @@ private:
 	FilterControler mFilter;
 	Oscillator mLFO;
 	RearmClock mRearmClock;
+	Fattner mFattner;
 	EffectRack mEffectRack;
 	double mLFOFilterModAmount;
 	bool mRearmOnFrequencyUpdate;

@@ -262,6 +262,8 @@
     <ClInclude Include="DspFilters\Utilities.h" />
     <ClInclude Include="EffectRack.h" />
     <ClInclude Include="Enum.h" />
+    <ClInclude Include="Equalizer.h" />
+    <ClInclude Include="Fattner.h" />
     <ClInclude Include="FilterControler.h" />
     <ClInclude Include="Oscillator.h" />
     <ClInclude Include="ParameterPrinterControl.h" />
@@ -289,6 +291,8 @@
     <ClCompile Include="DspFilters\RootFinder.cpp" />
     <ClCompile Include="DspFilters\State.cpp" />
     <ClCompile Include="EffectRack.cpp" />
+    <ClCompile Include="Equalizer.cpp" />
+    <ClCompile Include="Fattner.cpp" />
     <ClCompile Include="FilterControler.cpp" />
     <ClCompile Include="Oscillator.cpp" />
     <ClCompile Include="ParameterPrinterControl.cpp" />

@@ -59,6 +59,8 @@
     <ClCompile Include="DspFilters\State.cpp">
       <Filter>DSPFilters</Filter>
     </ClCompile>
+    <ClCompile Include="Equalizer.cpp" />
+    <ClCompile Include="Fattner.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Wobbleizer.h" />
@@ -142,6 +144,8 @@
     <ClInclude Include="DspFilters\Utilities.h">
       <Filter>DSPFilters</Filter>
     </ClInclude>
+    <ClInclude Include="Equalizer.h" />
+    <ClInclude Include="Fattner.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Wobbleizer.rc" />

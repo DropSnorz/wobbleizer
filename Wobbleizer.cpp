@@ -76,6 +76,7 @@ Wobbleizer::Wobbleizer(IPlugInstanceInfo instanceInfo)
 
   mFilter = FilterControler();
   mRearmClock = RearmClock();
+  mFattner = Fattner();
   mEffectRack = EffectRack();
   //arguments are: name, defaultVal, minVal, maxVal, step, label
   GetParam(kFilterMode)->InitEnum("FilterMode", FilterControler::FILTER_MODE_LOWPASS, FilterControler::kNumFilterModes);
@@ -175,9 +176,6 @@ Wobbleizer::Wobbleizer(IPlugInstanceInfo instanceInfo)
   GetParam(kRearmTap)->SetDisplayText(1, "Rearmed !");
 
 
-
-  //TODO Continue impl...
-
 #pragma endregion
 
   IGraphics* pGraphics = MakeGraphics(this, kWidth, kHeight);
@@ -213,6 +211,7 @@ Wobbleizer::Wobbleizer(IPlugInstanceInfo instanceInfo)
 
 
   //BPM View;
+
   IRECT versionRect(500, 150, 580, 170);
   IText versionText(14, &COLOR_WHITE, "Arial", IText::kStyleNormal, IText::kAlignNear, 0, IText::kQualityDefault);
   ITextControl* versionTextControl = new ITextControl(this,versionRect,&versionText,VST3_VER_STR);
@@ -226,9 +225,8 @@ Wobbleizer::Wobbleizer(IPlugInstanceInfo instanceInfo)
   IBitmap debugBackground = pGraphics->LoadIBitmap(DEBUG_BACKGROUND_ID, DEBUG_BACKGROUND_FN);
   debugPanel = new DebugPanelControl(this, 260, 175, &debugBackground, debugRect);
   pGraphics->AttachControl(debugPanel);
-
-
   
+
   //pGraphics->ShowControlBounds(true);
 
   AttachGraphics(pGraphics);
@@ -255,6 +253,7 @@ void Wobbleizer::ProcessDoubleReplacing(double** inputs, double** outputs, int n
 	double* rightOutput = outputs[1];
 
 	//Debug prints
+	
 	char strti[20];
 	char finalStrTi[400];
 	strcpy(finalStrTi, ">PROCESS AUDIO CORE [frequency]");
@@ -262,6 +261,7 @@ void Wobbleizer::ProcessDoubleReplacing(double** inputs, double** outputs, int n
 	strcat(finalStrTi, strti);
 
 	debugPanel->Print(finalStrTi);
+	
 
 	// LFO and rearm control update
 	double currentTempo = GetTempo();
@@ -272,12 +272,13 @@ void Wobbleizer::ProcessDoubleReplacing(double** inputs, double** outputs, int n
 	ITimeInfo* ti = new ITimeInfo();
 	GetTime(ti);
 	double tivalue = ti->mPPQPos;
-
+	
 	mRearmClock.setTempo(currentTempo);
 	if (mRearmClock.getNeedRearm(tivalue)){
 		debugPanel->Print(">AUDIO CORE : LFO PHASE REARMED");
 		mLFO.resetPhase();
 	}
+	
 	
 	//GUI update
 	GetGUI()->SetParameterFromPlug(kGraphicLFOFeedback, mFilter.getCalculatedCutoffFrequency(), false);
@@ -339,6 +340,8 @@ void Wobbleizer::ProcessDoubleReplacing(double** inputs, double** outputs, int n
 		}
 	}
 
+	mFattner.process(inputs, nFrames);
+
 	for (int s = 0; s < nFrames; ++s){
 		leftOutput[s] = inputs[0][s];
 		rightOutput[s] = inputs[1][s];
@@ -351,8 +354,10 @@ void Wobbleizer::Reset()
 {
 	TRACE;
 	IMutexLock lock(this);
-	mLFO.setSampleRate(GetSampleRate());
-	mFilter.setSampleRate(GetSampleRate());
+	double sampleRate = GetSampleRate();
+	mLFO.setSampleRate(sampleRate);
+	mFilter.setSampleRate(sampleRate);
+	mFattner.setSampleRate(sampleRate);
 
 }
 
@@ -444,7 +449,7 @@ void Wobbleizer::OnParamChange(int paramIdx)
 		mRearmOnFrequencyUpdate = GetParam(kRearmOnFrequencyUpdate)->Bool();
 		break;
 	case kBoosterRate:
-		mEffectRack.setEffectValue(GetParam(kBoosterRate)->Value());
+		mFattner.setRatio(GetParam(kBoosterRate)->Value());
 		break;
 	default:
       break;
@@ -472,11 +477,13 @@ void Wobbleizer::OnParamChange(int paramIdx)
 
 
 	//DebugPrinter update
+	
 	char debugText[200];
 	strcpy(debugText, ">PARAMETER UPDATE: ");
 	strcat(debugText, GetParam(paramIdx)->GetNameForHost());
 	strcat(debugText, " VALUE ");
 	strcat(debugText, valueDisplay);
 	debugPanel->Print(debugText);
+	
 
 }
