@@ -27,12 +27,14 @@ double** FilterControler::process(double** inputs, int nframes){
 	lowPassFilterSO->setParam(1, currentCutoff);
 	highPassFilter->setParam(1, currentCutoff);
 	bandPassFilter->setParam(1, currentCutoff);
-
 	
 	switch (mode){
 	case FILTER_MODE_LOWPASS:
 		lowPassFilter->process(nframes,inputs);
-		lowPassFilterSO->process(nframes, inputs);
+		//lowPassFilterSO->process(nframes, inputs);
+
+		//lowPassBiquadFilter->process(inputs, nframes);
+
 		break;
 	case FILTER_MODE_HIGHPASS:
 		highPassFilter->process(nframes, inputs);
@@ -67,6 +69,7 @@ void FilterControler::setResonance(double newResonance){
 	lowPassFilterSO->setParam(2, resonance);
 	highPassFilter->setParam(2, resonance);
 	bandPassFilter->setParam(2, resonance);
+
 }
 
 void FilterControler::setSampleRate(double newSampleRate){
@@ -76,6 +79,7 @@ void FilterControler::setSampleRate(double newSampleRate){
 	lowPassFilterSO->setParam(0, sampleRate);
 	highPassFilter->setParam(0, sampleRate);
 	bandPassFilter->setParam(0, sampleRate);
+
 }
 
 void FilterControler::setCutoffFromFrequency(double frequency){

@@ -79,7 +79,7 @@ Wobbleizer::Wobbleizer(IPlugInstanceInfo instanceInfo)
   mFattner = Fattner();
   mEffectRack = EffectRack();
   //arguments are: name, defaultVal, minVal, maxVal, step, label
-  GetParam(kFilterMode)->InitEnum("FilterMode", FilterControler::FILTER_MODE_LOWPASS, FilterControler::kNumFilterModes);
+  GetParam(kFilterMode)->InitEnum("FilterMode", FilterMode::FILTER_MODE_LOWPASS, FilterMode::kNumFilterModes);
   GetParam(kFilterCutoff)->InitDouble("FilterCutoff", 0.999, 0.001, 0.999, 0.001,"HZ");
   //GetParam(kFilterCutoff)->SetShape(2);
   GetParam(kFilterResonance)->InitDouble("FilterResonance", 0.7, 0.4, 3, 0.001);
@@ -103,9 +103,9 @@ Wobbleizer::Wobbleizer(IPlugInstanceInfo instanceInfo)
 
   // FILTER MODE
 
-  GetParam(kFilterMode)->SetDisplayText(FilterControler::FilterMode::FILTER_MODE_BANDPASS, "BandPass");
-  GetParam(kFilterMode)->SetDisplayText(FilterControler::FilterMode::FILTER_MODE_HIGHPASS, "HighPass");
-  GetParam(kFilterMode)->SetDisplayText(FilterControler::FilterMode::FILTER_MODE_LOWPASS, "LowPass");
+  GetParam(kFilterMode)->SetDisplayText(FilterMode::FILTER_MODE_BANDPASS, "BandPass");
+  GetParam(kFilterMode)->SetDisplayText(FilterMode::FILTER_MODE_HIGHPASS, "HighPass");
+  GetParam(kFilterMode)->SetDisplayText(FilterMode::FILTER_MODE_LOWPASS, "LowPass");
 
 
   // WAVE
@@ -368,7 +368,7 @@ void Wobbleizer::OnParamChange(int paramIdx)
 	switch (paramIdx)
 	{
 	case kFilterMode:
-		mFilter.setFilterMode(static_cast<FilterControler::FilterMode>(GetParam(kFilterMode)->Int()));
+		mFilter.setFilterMode(static_cast<FilterMode>(GetParam(kFilterMode)->Int()));
 		break;
 	case kFilterCutoff:
 		mFilter.setCutoff(GetParam(kFilterCutoff)->Value());

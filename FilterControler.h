@@ -1,16 +1,16 @@
 #include <math.h>
 #include "DspFilters/SmoothedFilter.h"
 #include "DspFilters/RBJ.h"
-//#include "DspFilters/Dsp.h"
+enum FilterMode {
+	FILTER_MODE_LOWPASS = 0,
+	FILTER_MODE_HIGHPASS,
+	FILTER_MODE_BANDPASS,
+	kNumFilterModes
+};
 
 class FilterControler {
 public:
-	enum FilterMode {
-		FILTER_MODE_LOWPASS = 0,
-		FILTER_MODE_HIGHPASS,
-		FILTER_MODE_BANDPASS,
-		kNumFilterModes
-	};
+
 	FilterControler() :
 		cutoff(0.999),
 		resonance(0.0),
@@ -78,5 +78,6 @@ private:
 	Dsp::Filter* lowPassFilterSO;
 	Dsp::Filter* highPassFilter;
 	Dsp::Filter* bandPassFilter;
+
 
 };

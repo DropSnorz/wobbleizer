@@ -1,8 +1,5 @@
 #pragma once
-//#include "DspFilters/Dsp.h"
-
-#include"DspFilters/RBJ.h"
-#include "DspFilters/SmoothedFilter.h"
+#include "Biquad.h"
 class Equalizer
 {
 public:
@@ -10,7 +7,7 @@ public:
 	void process(double** inputs, int nFrames);
 	void setBandFrequency(int nBand, double frequency);
 	void setBandGain(int nBand, double GainDB);
-	void setBandWidth(int nBand, double width);
+	void setBandReso(int nBand, double Q);
 
 	inline void setSampleRate(double sampleRate){ mSampleRate = sampleRate; }
 
@@ -18,7 +15,8 @@ public:
 
 private:
 
-	Dsp::Filter** filters;
+	Biquad** FilterR;
+	Biquad** FilterL;
 
 	int numBands;
 	double mSampleRate;

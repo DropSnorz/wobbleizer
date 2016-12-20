@@ -1,5 +1,5 @@
 #pragma once
-#include "Equalizer.h"
+#include "dsp/Equalizer/Equalizer.h"
 class Fattner
 {
 public:
@@ -15,8 +15,6 @@ private:
 
 	Equalizer* equalizer;
 	double mGainBase[6];
-	double mQBase[6];
-
 
 };
 

@@ -146,6 +146,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>$(VST_DEFS);$(DEBUG_DEFS);%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -158,6 +159,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>$(VST_DEFS);$(DEBUG_DEFS);%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -260,9 +262,10 @@
     <ClInclude Include="DspFilters\State.h" />
     <ClInclude Include="DspFilters\Types.h" />
     <ClInclude Include="DspFilters\Utilities.h" />
+    <ClInclude Include="dsp\Equalizer\Biquad.h" />
+    <ClInclude Include="dsp\Equalizer\Equalizer.h" />
     <ClInclude Include="EffectRack.h" />
     <ClInclude Include="Enum.h" />
-    <ClInclude Include="Equalizer.h" />
     <ClInclude Include="Fattner.h" />
     <ClInclude Include="FilterControler.h" />
     <ClInclude Include="Oscillator.h" />
@@ -290,8 +293,9 @@
     <ClCompile Include="DspFilters\RBJ.cpp" />
     <ClCompile Include="DspFilters\RootFinder.cpp" />
     <ClCompile Include="DspFilters\State.cpp" />
+    <ClCompile Include="dsp\Equalizer\Biquad.cpp" />
+    <ClCompile Include="dsp\Equalizer\Equalizer.cpp" />
     <ClCompile Include="EffectRack.cpp" />
-    <ClCompile Include="Equalizer.cpp" />
     <ClCompile Include="Fattner.cpp" />
     <ClCompile Include="FilterControler.cpp" />
     <ClCompile Include="Oscillator.cpp" />

@@ -134,8 +134,9 @@
     <ClInclude Include="DspFilters\Utilities.h">
       <Filter>DSPFilters</Filter>
     </ClInclude>
-    <ClInclude Include="Equalizer.h" />
     <ClInclude Include="Fattner.h" />
+    <ClInclude Include="dsp\Equalizer\Equalizer.h" />
+    <ClInclude Include="dsp\Equalizer\Biquad.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="app_wrapper\app_dialog.cpp">
@@ -222,8 +223,9 @@
     <ClCompile Include="DspFilters\State.cpp">
       <Filter>DSPFilters</Filter>
     </ClCompile>
-    <ClCompile Include="Equalizer.cpp" />
     <ClCompile Include="Fattner.cpp" />
+    <ClCompile Include="dsp\Equalizer\Equalizer.cpp" />
+    <ClCompile Include="dsp\Equalizer\Biquad.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Wobbleizer.rc" />
