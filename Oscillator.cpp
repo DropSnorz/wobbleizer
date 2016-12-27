@@ -220,6 +220,15 @@ void Oscillator::generate(double* buffer, int nFrames) {
 	}
 }
 
+double Oscillator::reachSample(int sampleCount){
+
+	for (int i = 0; i < sampleCount - 1; i++){
+		nextSample();
+	}
+	return nextSample();
+
+}
+
 
 double Oscillator::nextSample() {
 

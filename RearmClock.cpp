@@ -13,12 +13,12 @@ bool RearmClock::getNeedRearm(double time){
 	}
 
 	double result = fmod(time, mBeatIncrement);
-	if (result < 0.05 && !(previousTime<0.05))
-		{
-			previousTime = result;
+	if (result < 0.05 && !(previousTime<0.05)){
+		previousTime = result;
 		return true;
 	}
 	else{
+
 		previousTime = result;
 		return false;
 		 

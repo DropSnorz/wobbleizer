@@ -9,7 +9,9 @@ public:
 	void init();
 	void setSampleRate(double sampleRate);
 	void setRatio(double ratio);
-	void process(double** inputs, int nFrames);
+	inline void process(double** inputs, int nFrames){
+		equalizer->process(inputs, nFrames);
+	};
 
 private:
 

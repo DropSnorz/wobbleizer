@@ -252,17 +252,6 @@ void Wobbleizer::ProcessDoubleReplacing(double** inputs, double** outputs, int n
 	double* leftOutput = outputs[0];
 	double* rightOutput = outputs[1];
 
-	//Debug prints
-	
-	char strti[20];
-	char finalStrTi[400];
-	strcpy(finalStrTi, ">PROCESS AUDIO CORE [frequency]");
-	sprintf(strti, "%d", (int)mFilter.getCalculatedCutoffFrequency());
-	strcat(finalStrTi, strti);
-
-	debugPanel->Print(finalStrTi);
-	
-
 	// LFO and rearm control update
 	double currentTempo = GetTempo();
 	if (currentTempo != mLFO.getTempo()){
@@ -279,7 +268,6 @@ void Wobbleizer::ProcessDoubleReplacing(double** inputs, double** outputs, int n
 		mLFO.resetPhase();
 	}
 	
-	
 	//GUI update
 	GetGUI()->SetParameterFromPlug(kGraphicLFOFeedback, mFilter.getCalculatedCutoffFrequency(), false);
 
@@ -289,10 +277,7 @@ void Wobbleizer::ProcessDoubleReplacing(double** inputs, double** outputs, int n
 	
 	if (nFrames <= splitSize){
 
-		for (int s = 0; s < nFrames; s++){
-
-			lfoFilterModulation = mLFO.nextSample() * mLFOFilterModAmount;
-		}
+		lfoFilterModulation = mLFO.reachSample(nFrames) * mLFOFilterModAmount;
 
 		mFilter.setCutoffMod(lfoFilterModulation);
 		mFilter.process(inputs, nFrames);
@@ -303,12 +288,8 @@ void Wobbleizer::ProcessDoubleReplacing(double** inputs, double** outputs, int n
 		int count = 0;
 
 		while (remainingSamples >= splitSize){
-			for (int s = 0; s < splitSize; s++){
 
-				lfoFilterModulation = mLFO.nextSample() * mLFOFilterModAmount;
-
-			}
-
+			lfoFilterModulation = mLFO.reachSample(splitSize) * mLFOFilterModAmount;
 			mFilter.setCutoffMod(lfoFilterModulation);
 
 			double** currentInput = (double**) malloc(2*sizeof(double**));
@@ -325,11 +306,7 @@ void Wobbleizer::ProcessDoubleReplacing(double** inputs, double** outputs, int n
 
 		if (remainingSamples > 0){
 
-			for (int s = 0; s < remainingSamples; s++){
-
-				lfoFilterModulation = mLFO.nextSample() * mLFOFilterModAmount;
-			}
-
+			lfoFilterModulation = mLFO.reachSample(remainingSamples) * mLFOFilterModAmount;
 			mFilter.setCutoffMod(lfoFilterModulation);
 
 			double** currentInput = (double**)malloc(2 * sizeof(double**));

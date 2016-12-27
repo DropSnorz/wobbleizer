@@ -42,7 +42,6 @@ Equalizer::~Equalizer()
 void Equalizer::process(double** inputs, int nFrames){
 	
 	for (int s = 0; s < nFrames; s++){
-
 		for (int b = 0; b < numBands; b++){
 
 			inputs[0][s] = FilterL[b]->process(inputs[0][s]);

@@ -32,9 +32,6 @@ double** FilterControler::process(double** inputs, int nframes){
 	case FILTER_MODE_LOWPASS:
 		lowPassFilter->process(nframes,inputs);
 		//lowPassFilterSO->process(nframes, inputs);
-
-		//lowPassBiquadFilter->process(inputs, nframes);
-
 		break;
 	case FILTER_MODE_HIGHPASS:
 		highPassFilter->process(nframes, inputs);
@@ -88,12 +85,6 @@ void FilterControler::setCutoffFromFrequency(double frequency){
 }
 
 void FilterControler::initBiquadFilter(){
-
-
-	/*lowPassFilter = new Dsp::SmoothedFilterDesign <Dsp::ChebyshevI::Design::LowPass<2>, 2 >(1024);
-	highPassFilter = new Dsp::SmoothedFilterDesign <Dsp::ChebyshevI::Design::HighPass<2>, 2>(1024);
-	bandPassFilter = new Dsp::SmoothedFilterDesign <Dsp::ChebyshevI::Design::BandPass<2>, 2>(1024);
-	*/
 
 	
 	lowPassFilterSO = new Dsp::SmoothedFilterDesign < Dsp::RBJ::Design::LowPass, 2>(1024);

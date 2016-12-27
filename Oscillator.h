@@ -47,6 +47,7 @@ public:
 	void setMuted(bool isMuted);
 	void updateFrequency();
 	void generate(double* buffer, int nFrames);
+	double reachSample(int sampleCount);
 	double nextSample();
 	void resetPhase();
 

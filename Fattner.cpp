@@ -36,20 +36,12 @@ void Fattner::setSampleRate(double sampleRate){
 	equalizer->setSampleRate(sampleRate);
 }
 void Fattner::setRatio(double ratio){
-
 	
 	for (int i = 0; i < 6; i++){
 
 		equalizer->setBandGain(i, ratio*mGainBase[i]);
 		
 	}
-}
-
-
-void Fattner::process(double** inputs, int nFrames){
-
-	equalizer->process(inputs, nFrames);
-
 }
 
 Fattner::~Fattner(){
