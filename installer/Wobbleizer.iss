@@ -1,6 +1,6 @@
 [Setup]
 AppName=Wobbleizer
-AppVersion=1.0.0
+AppVersion=0.20.2
 DefaultDirName={pf}\Wobbleizer
 DefaultGroupName=Wobbleizer
 Compression=lzma2

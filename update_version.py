@@ -9,7 +9,7 @@ def replacestrs(filename, s, r):
   files = glob.glob(filename)
   
   for line in fileinput.input(files,inplace=1):
-    string.find(line, s)
+    line.find(s)
     line = line.replace(s, r)
     sys.stdout.write(line)
 
@@ -21,7 +21,7 @@ def main():
 
   for line in fileinput.input(scriptpath + "/resource.h",inplace=0):
     if "#define PLUG_VER " in line:
-      FullVersion = int(string.lstrip(line, "#define PLUG_VER "), 16)
+      FullVersion = int(line.lstrip( "#define PLUG_VER "), 16)
       major = FullVersion & 0xFFFF0000
       MajorStr = str(major >> 16)
       minor = FullVersion & 0x0000FF00
@@ -35,8 +35,8 @@ def main():
   CFBundleGetInfoString = FullVersionStr + ", Copyright DropSnorz, " + str(today.year)
   CFBundleVersion = FullVersionStr
   
-  print "update_version.py - setting version to " + FullVersionStr
-  print "Updating plist version info..."
+  print ("update_version.py - setting version to " + FullVersionStr)
+  print ("Updating plist version info...")
   
   plistpath = scriptpath + "/resources/Wobbleizer-VST2-Info.plist"
   vst2 = plistlib.readPlist(plistpath)
@@ -94,7 +94,7 @@ def main():
 #   plistlib.writePlist(iosapp, plistpath)
 #   replacestrs(plistpath, "//Apple//", "//Apple Computer//");
 
-  print "Updating Mac Installer version info..."
+  print ("Updating Mac Installer version info...")
   
   plistpath = scriptpath + "/installer/Wobbleizer.pkgproj"
   installer = plistlib.readPlist(plistpath)
@@ -105,7 +105,7 @@ def main():
   plistlib.writePlist(installer, plistpath)
   replacestrs(plistpath, "//Apple//", "//Apple Computer//");
   
-  print "Updating Windows Installer version info..."
+  print ("Updating Windows Installer version info...")
   
   for line in fileinput.input(scriptpath + "/installer/Wobbleizer.iss",inplace=1):
     if "AppVersion" in line:
