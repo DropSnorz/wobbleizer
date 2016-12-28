@@ -1,6 +1,6 @@
 #include <math.h>
-#include "DspFilters/SmoothedFilter.h"
-#include "DspFilters/RBJ.h"
+#include "dsp/DspFilters/SmoothedFilter.h"
+#include "dsp/DspFilters/RBJ.h"
 enum FilterMode {
 	FILTER_MODE_LOWPASS = 0,
 	FILTER_MODE_HIGHPASS,
