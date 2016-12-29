@@ -147,6 +147,7 @@
       <PreprocessorDefinitions>$(VST_DEFS);$(DEBUG_DEFS);%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ADDITIONAL_INCLUDES);..\wdl-ol\WDL;..\wdl-ol\WDL\lice;..\wdl-ol\WDL\IPlug;src/</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -160,6 +161,7 @@
       <PreprocessorDefinitions>$(VST_DEFS);$(DEBUG_DEFS);%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ADDITIONAL_INCLUDES);..\wdl-ol\WDL;..\wdl-ol\WDL\lice;..\wdl-ol\WDL\IPlug;src/</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -176,6 +178,7 @@
       <PreprocessorDefinitions>$(VST_DEFS);$(RELEASE_DEFS);%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>$(ADDITIONAL_INCLUDES);..\wdl-ol\WDL;..\wdl-ol\WDL\lice;..\wdl-ol\WDL\IPlug;src/</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -193,6 +196,7 @@
       <PreprocessorDefinitions>$(VST_DEFS);$(RELEASE_DEFS);%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>$(ADDITIONAL_INCLUDES);..\wdl-ol\WDL;..\wdl-ol\WDL\lice;..\wdl-ol\WDL\IPlug;src/</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -210,6 +214,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>$(VST_DEFS);$(TRACER_DEFS);%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>$(ADDITIONAL_INCLUDES);..\wdl-ol\WDL;..\wdl-ol\WDL\lice;..\wdl-ol\WDL\IPlug;src/</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -227,6 +232,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>$(VST_DEFS);$(TRACER_DEFS);%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>$(ADDITIONAL_INCLUDES);..\wdl-ol\WDL;..\wdl-ol\WDL\lice;..\wdl-ol\WDL\IPlug;src/</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -238,73 +244,73 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\wdl-ol\WDL\IPlug\IPlugVST.h" />
-    <ClInclude Include="DebugPanelControl.h" />
-    <ClInclude Include="dsp\DspFilters\Bessel.h" />
-    <ClInclude Include="dsp\DspFilters\Biquad.h" />
-    <ClInclude Include="dsp\DspFilters\Butterworth.h" />
-    <ClInclude Include="dsp\DspFilters\Cascade.h" />
-    <ClInclude Include="dsp\DspFilters\ChebyshevI.h" />
-    <ClInclude Include="dsp\DspFilters\ChebyshevII.h" />
-    <ClInclude Include="dsp\DspFilters\Common.h" />
-    <ClInclude Include="dsp\DspFilters\Custom.h" />
-    <ClInclude Include="dsp\DspFilters\Design.h" />
-    <ClInclude Include="dsp\DspFilters\Dsp.h" />
-    <ClInclude Include="dsp\DspFilters\Elliptic.h" />
-    <ClInclude Include="dsp\DspFilters\Filter.h" />
-    <ClInclude Include="dsp\DspFilters\Layout.h" />
-    <ClInclude Include="dsp\DspFilters\Legendre.h" />
-    <ClInclude Include="dsp\DspFilters\MathSupplement.h" />
-    <ClInclude Include="dsp\DspFilters\Params.h" />
-    <ClInclude Include="dsp\DspFilters\PoleFilter.h" />
-    <ClInclude Include="dsp\DspFilters\RBJ.h" />
-    <ClInclude Include="dsp\DspFilters\RootFinder.h" />
-    <ClInclude Include="dsp\DspFilters\SmoothedFilter.h" />
-    <ClInclude Include="dsp\DspFilters\State.h" />
-    <ClInclude Include="dsp\DspFilters\Types.h" />
-    <ClInclude Include="dsp\DspFilters\Utilities.h" />
-    <ClInclude Include="dsp\Equalizer\Biquad.h" />
-    <ClInclude Include="dsp\Equalizer\Equalizer.h" />
-    <ClInclude Include="EffectRack.h" />
-    <ClInclude Include="Enum.h" />
-    <ClInclude Include="Fattner.h" />
-    <ClInclude Include="FilterControler.h" />
-    <ClInclude Include="Oscillator.h" />
-    <ClInclude Include="ParameterPrinterControl.h" />
-    <ClInclude Include="RearmClock.h" />
-    <ClInclude Include="Wobbleizer.h" />
-    <ClInclude Include="resource.h" />
+    <ClInclude Include="src\DebugPanelControl.h" />
+    <ClInclude Include="src\dsp\DspFilters\Bessel.h" />
+    <ClInclude Include="src\dsp\DspFilters\Biquad.h" />
+    <ClInclude Include="src\dsp\DspFilters\Butterworth.h" />
+    <ClInclude Include="src\dsp\DspFilters\Cascade.h" />
+    <ClInclude Include="src\dsp\DspFilters\ChebyshevI.h" />
+    <ClInclude Include="src\dsp\DspFilters\ChebyshevII.h" />
+    <ClInclude Include="src\dsp\DspFilters\Common.h" />
+    <ClInclude Include="src\dsp\DspFilters\Custom.h" />
+    <ClInclude Include="src\dsp\DspFilters\Design.h" />
+    <ClInclude Include="src\dsp\DspFilters\Dsp.h" />
+    <ClInclude Include="src\dsp\DspFilters\Elliptic.h" />
+    <ClInclude Include="src\dsp\DspFilters\Filter.h" />
+    <ClInclude Include="src\dsp\DspFilters\Layout.h" />
+    <ClInclude Include="src\dsp\DspFilters\Legendre.h" />
+    <ClInclude Include="src\dsp\DspFilters\MathSupplement.h" />
+    <ClInclude Include="src\dsp\DspFilters\Params.h" />
+    <ClInclude Include="src\dsp\DspFilters\PoleFilter.h" />
+    <ClInclude Include="src\dsp\DspFilters\RBJ.h" />
+    <ClInclude Include="src\dsp\DspFilters\RootFinder.h" />
+    <ClInclude Include="src\dsp\DspFilters\SmoothedFilter.h" />
+    <ClInclude Include="src\dsp\DspFilters\State.h" />
+    <ClInclude Include="src\dsp\DspFilters\Types.h" />
+    <ClInclude Include="src\dsp\DspFilters\Utilities.h" />
+    <ClInclude Include="src\dsp\Equalizer\Biquad.h" />
+    <ClInclude Include="src\dsp\Equalizer\Equalizer.h" />
+    <ClInclude Include="src\EffectRack.h" />
+    <ClInclude Include="src\Enum.h" />
+    <ClInclude Include="src\Fattner.h" />
+    <ClInclude Include="src\FilterControler.h" />
+    <ClInclude Include="src\Oscillator.h" />
+    <ClInclude Include="src\ParameterPrinterControl.h" />
+    <ClInclude Include="src\RearmClock.h" />
+    <ClInclude Include="src\Wobbleizer.h" />
+    <ClInclude Include="src\resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\wdl-ol\WDL\IPlug\IPlugVST.cpp" />
-    <ClCompile Include="DebugPanelControl.cpp" />
-    <ClCompile Include="dsp\DspFilters\Bessel.cpp" />
-    <ClCompile Include="dsp\DspFilters\Biquad.cpp" />
-    <ClCompile Include="dsp\DspFilters\Butterworth.cpp" />
-    <ClCompile Include="dsp\DspFilters\Cascade.cpp" />
-    <ClCompile Include="dsp\DspFilters\ChebyshevI.cpp" />
-    <ClCompile Include="dsp\DspFilters\ChebyshevII.cpp" />
-    <ClCompile Include="dsp\DspFilters\Custom.cpp" />
-    <ClCompile Include="dsp\DspFilters\Design.cpp" />
-    <ClCompile Include="dsp\DspFilters\Elliptic.cpp" />
-    <ClCompile Include="dsp\DspFilters\Filter.cpp" />
-    <ClCompile Include="dsp\DspFilters\Legendre.cpp" />
-    <ClCompile Include="dsp\DspFilters\Param.cpp" />
-    <ClCompile Include="dsp\DspFilters\PoleFilter.cpp" />
-    <ClCompile Include="dsp\DspFilters\RBJ.cpp" />
-    <ClCompile Include="dsp\DspFilters\RootFinder.cpp" />
-    <ClCompile Include="dsp\DspFilters\State.cpp" />
-    <ClCompile Include="dsp\Equalizer\Biquad.cpp" />
-    <ClCompile Include="dsp\Equalizer\Equalizer.cpp" />
-    <ClCompile Include="EffectRack.cpp" />
-    <ClCompile Include="Fattner.cpp" />
-    <ClCompile Include="FilterControler.cpp" />
-    <ClCompile Include="Oscillator.cpp" />
-    <ClCompile Include="ParameterPrinterControl.cpp" />
-    <ClCompile Include="RearmClock.cpp" />
-    <ClCompile Include="Wobbleizer.cpp" />
+    <ClCompile Include="src\DebugPanelControl.cpp" />
+    <ClCompile Include="src\dsp\DspFilters\Bessel.cpp" />
+    <ClCompile Include="src\dsp\DspFilters\Biquad.cpp" />
+    <ClCompile Include="src\dsp\DspFilters\Butterworth.cpp" />
+    <ClCompile Include="src\dsp\DspFilters\Cascade.cpp" />
+    <ClCompile Include="src\dsp\DspFilters\ChebyshevI.cpp" />
+    <ClCompile Include="src\dsp\DspFilters\ChebyshevII.cpp" />
+    <ClCompile Include="src\dsp\DspFilters\Custom.cpp" />
+    <ClCompile Include="src\dsp\DspFilters\Design.cpp" />
+    <ClCompile Include="src\dsp\DspFilters\Elliptic.cpp" />
+    <ClCompile Include="src\dsp\DspFilters\Filter.cpp" />
+    <ClCompile Include="src\dsp\DspFilters\Legendre.cpp" />
+    <ClCompile Include="src\dsp\DspFilters\Param.cpp" />
+    <ClCompile Include="src\dsp\DspFilters\PoleFilter.cpp" />
+    <ClCompile Include="src\dsp\DspFilters\RBJ.cpp" />
+    <ClCompile Include="src\dsp\DspFilters\RootFinder.cpp" />
+    <ClCompile Include="src\dsp\DspFilters\State.cpp" />
+    <ClCompile Include="src\dsp\Equalizer\Biquad.cpp" />
+    <ClCompile Include="src\dsp\Equalizer\Equalizer.cpp" />
+    <ClCompile Include="src\EffectRack.cpp" />
+    <ClCompile Include="src\Fattner.cpp" />
+    <ClCompile Include="src\FilterControler.cpp" />
+    <ClCompile Include="src\Oscillator.cpp" />
+    <ClCompile Include="src\ParameterPrinterControl.cpp" />
+    <ClCompile Include="src\RearmClock.cpp" />
+    <ClCompile Include="src\Wobbleizer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Wobbleizer.rc" />
+    <ResourceCompile Include="src\Wobbleizer.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
