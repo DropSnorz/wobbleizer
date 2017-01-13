@@ -435,22 +435,23 @@ void Wobbleizer::OnParamChange(int paramIdx)
 
 	// Parameter printer update
 	char valueDisplay[50] = "";
-	int lastClickedId = paramIdx;
-	int tempIdx = GetGUI()->GetLastClickedParam();
-	if (tempIdx >= 0){
+	int lastClickedId = GetGUI()->GetLastClickedParam();
 
-		lastClickedId = tempIdx;
-	}
+	if (lastClickedId >= 0){
+		if (lastClickedId == kFilterCutoff){
+			sprintf(valueDisplay, "%d", (int)mFilter.getCutoffFrequency());
+		}
+		else{
+			GetParam(lastClickedId)->GetDisplayForHost(valueDisplay);
+		}
 
-	if (lastClickedId == kFilterCutoff){
-		sprintf(valueDisplay, "%d", (int)mFilter.getCutoffFrequency());
+		if (lastClickedId != kGraphicLFOFeedback){
+			char nameDisplay[100];
+			strcpy(nameDisplay, GetParam(lastClickedId)->GetNameForHost());
+			parameterPrinter->SetParameterPairText(nameDisplay, valueDisplay);
+
+		}
 	}
-	else{
-		GetParam(lastClickedId)->GetDisplayForHost(valueDisplay);
-	}
-	char nameDisplay[100];
-	strcpy(nameDisplay, GetParam(lastClickedId)->GetNameForHost());
-	parameterPrinter->SetParameterPairText(nameDisplay, valueDisplay);
 
 
 	//DebugPrinter update
