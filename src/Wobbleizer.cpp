@@ -78,6 +78,17 @@ Wobbleizer::Wobbleizer(IPlugInstanceInfo instanceInfo)
   mRearmClock = RearmClock();
   mFattner = Fattner();
   mEffectRack = EffectRack();
+
+  SetLatency(1024);
+
+  audioInputBuffer = (double**)malloc(2 * sizeof(double**));
+  audioInputBuffer[0] = (double*)malloc(BUFFER_SIZE * sizeof(double));
+  audioInputBuffer[1] = (double*)malloc(BUFFER_SIZE * sizeof(double));
+  audioOutputBuffer = (double**)malloc(2 * sizeof(double**));
+  audioOutputBuffer[0] = (double*)malloc(BUFFER_SIZE * sizeof(double));
+  audioOutputBuffer[1] = (double*)malloc(BUFFER_SIZE * sizeof(double));
+
+
   //arguments are: name, defaultVal, minVal, maxVal, step, label
   GetParam(kFilterMode)->InitEnum("FilterMode", FilterMode::FILTER_MODE_LOWPASS, FilterMode::kNumFilterModes);
   GetParam(kFilterCutoff)->InitDouble("FilterCutoff", 0.999, 0.001, 0.999, 0.001,"HZ");
@@ -271,58 +282,56 @@ void Wobbleizer::ProcessDoubleReplacing(double** inputs, double** outputs, int n
 	//GUI update
 	GetGUI()->SetParameterFromPlug(kGraphicLFOFeedback, mFilter.getCalculatedCutoffFrequency(), false);
 
-	//Split audio to small buffers and process them
-	int splitSize = 256;
 	double lfoFilterModulation;
-	
-	if (nFrames <= splitSize){
 
-		lfoFilterModulation = mLFO.reachSample(nFrames) * mLFOFilterModAmount;
-
-		mFilter.setCutoffMod(lfoFilterModulation);
-		mFilter.process(inputs, nFrames);
-	}
-	else{
-
-		int remainingSamples = nFrames;
-		int count = 0;
-
-		while (remainingSamples >= splitSize){
-
-			lfoFilterModulation = mLFO.reachSample(splitSize) * mLFOFilterModAmount;
-			mFilter.setCutoffMod(lfoFilterModulation);
-
-			double** currentInput = (double**) malloc(2*sizeof(double**));
-			currentInput[0] = inputs[0] + (count*splitSize);
-			currentInput[1] = inputs[1] + (count*splitSize);
-
-			mFilter.process(currentInput, splitSize);
-
-			remainingSamples = remainingSamples - splitSize;
-			count = count + 1;
-
-			free(currentInput);
+	for (int frame = 0; frame < nFrames; ++frame) {
+		for (int channel = 0; channel < 2; ++channel) {
+			audioInputQueue.push(inputs[channel][frame]);
 		}
+		if (audioInputQueue.size() / 2 >= BUFFER_SIZE) {
 
-		if (remainingSamples > 0){
+			for (int i = 0; i < BUFFER_SIZE; i++) {
+				double leftSample = audioInputQueue.front();
+				audioOutputBuffer[0][i] = leftSample;
+				audioInputQueue.pop();
+				double rightSample = audioInputQueue.front();
+				audioOutputBuffer[1][i] = rightSample;
+				audioInputQueue.pop();
+			}
+			lfoFilterModulation = mLFO.reachSample(BUFFER_SIZE) * mLFOFilterModAmount;
 
-			lfoFilterModulation = mLFO.reachSample(remainingSamples) * mLFOFilterModAmount;
 			mFilter.setCutoffMod(lfoFilterModulation);
+			mFilter.process(audioOutputBuffer, BUFFER_SIZE);
 
-			double** currentInput = (double**)malloc(2 * sizeof(double**));
-			currentInput[0] = inputs[0] + (count*splitSize);
-			currentInput[1] = inputs[1] + (count*splitSize);
+			mFattner.process(audioOutputBuffer, BUFFER_SIZE);
 
-			mFilter.process(currentInput, remainingSamples);
+
+			for (int i = 0; i < BUFFER_SIZE; i++) {
+				for (int channel = 0; channel < 2; ++channel) {
+					audioOutputQueue.push(audioOutputBuffer[channel][i]);
+				}
+			}
 		}
 	}
 
-	mFattner.process(inputs, nFrames);
-
-	for (int s = 0; s < nFrames; ++s){
-		leftOutput[s] = inputs[0][s];
-		rightOutput[s] = inputs[1][s];
+	int outputQueueSizeInSample = audioOutputQueue.size() / 2;
+	int zerosAdded = 0;
+	if (outputQueueSizeInSample < nFrames) {
+		for (zerosAdded; zerosAdded < nFrames - outputQueueSizeInSample; zerosAdded++) {
+			for (int channel = 0; channel < 2; channel++) {
+				outputs[channel][zerosAdded] = 0;
+			}
+		}
 	}
+
+	for (int i = zerosAdded; i < nFrames; i++) {
+		for (int channel = 0; channel < 2; channel++) {
+			outputs[channel][i] = audioOutputQueue.front();
+			audioOutputQueue.pop();
+
+		}
+	}
+
 	free(ti);
 }
 
@@ -336,6 +345,7 @@ void Wobbleizer::Reset()
 	mFilter.setSampleRate(sampleRate);
 	mFattner.setSampleRate(sampleRate);
 
+	
 }
 
 void Wobbleizer::OnParamChange(int paramIdx)
