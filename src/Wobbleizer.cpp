@@ -79,14 +79,7 @@ Wobbleizer::Wobbleizer(IPlugInstanceInfo instanceInfo)
   mFattner = Fattner();
   mEffectRack = EffectRack();
 
-  SetLatency(1024);
-
-  audioInputBuffer = (double**)malloc(2 * sizeof(double**));
-  audioInputBuffer[0] = (double*)malloc(BUFFER_SIZE * sizeof(double));
-  audioInputBuffer[1] = (double*)malloc(BUFFER_SIZE * sizeof(double));
-  audioOutputBuffer = (double**)malloc(2 * sizeof(double**));
-  audioOutputBuffer[0] = (double*)malloc(BUFFER_SIZE * sizeof(double));
-  audioOutputBuffer[1] = (double*)malloc(BUFFER_SIZE * sizeof(double));
+  SetLatency(512);
 
 
   //arguments are: name, defaultVal, minVal, maxVal, step, label
@@ -284,53 +277,58 @@ void Wobbleizer::ProcessDoubleReplacing(double** inputs, double** outputs, int n
 
 	double lfoFilterModulation;
 
-	for (int frame = 0; frame < nFrames; ++frame) {
-		for (int channel = 0; channel < 2; ++channel) {
-			audioInputQueue.push(inputs[channel][frame]);
-		}
-		if (audioInputQueue.size() / 2 >= BUFFER_SIZE) {
 
-			for (int i = 0; i < BUFFER_SIZE; i++) {
-				double leftSample = audioInputQueue.front();
-				audioOutputBuffer[0][i] = leftSample;
-				audioInputQueue.pop();
-				double rightSample = audioInputQueue.front();
-				audioOutputBuffer[1][i] = rightSample;
-				audioInputQueue.pop();
-			}
-			lfoFilterModulation = mLFO.reachSample(BUFFER_SIZE) * mLFOFilterModAmount;
-
-			mFilter.setCutoffMod(lfoFilterModulation);
-			mFilter.process(audioOutputBuffer, BUFFER_SIZE);
-
-			mFattner.process(audioOutputBuffer, BUFFER_SIZE);
+	// nFrames to processingBuffer
+	audioLeftInputBuffer.Add(leftInput, nFrames * sizeof(double));
+	audioRightInputBuffer.Add(rightInput, nFrames * sizeof(double));
 
 
-			for (int i = 0; i < BUFFER_SIZE; i++) {
-				for (int channel = 0; channel < 2; ++channel) {
-					audioOutputQueue.push(audioOutputBuffer[channel][i]);
-				}
-			}
-		}
+	while (audioLeftInputBuffer.Available() >= sizeof(double)*BUFFER_SIZE) {
+		double** data;
+
+		data = (double**)malloc(2 * sizeof(double**));
+		data[0] = (double*)malloc(BUFFER_SIZE * sizeof(double));
+		data[1] = (double*)malloc(BUFFER_SIZE * sizeof(double));
+
+		audioLeftInputBuffer.GetToBuf(0, data[0], BUFFER_SIZE * sizeof(double));
+		audioLeftInputBuffer.Advance(BUFFER_SIZE * sizeof(double));
+
+		audioRightInputBuffer.GetToBuf(0, data[1], BUFFER_SIZE * sizeof(double));
+		audioRightInputBuffer.Advance(BUFFER_SIZE * sizeof(double));
+
+
+		//Do some stuff here 
+		lfoFilterModulation = mLFO.reachSample(BUFFER_SIZE) * mLFOFilterModAmount;
+
+		mFilter.setCutoffMod(lfoFilterModulation);
+		mFilter.process(data, BUFFER_SIZE);
+
+		//mFattner.process(data, BUFFER_SIZE);
+
+
+		// Add processed data to outputBuffer
+		audioLeftOutputBuffer.Add(data[0], BUFFER_SIZE * sizeof(double));
+		audioRightOutputBuffer.Add(data[1], BUFFER_SIZE * sizeof(double));
+
+		free(data[0]);
+		free(data[1]);
+		free(data);
+
 	}
+	// Not necessary if you have pre-added zeros to outputBuffer:
+	// if (outputBuffer.Available() < nFrames*sizeof(double)) {
+	// int n = nFrames*sizeof(double) - outputBuffer.Available();
+	// memset(out1, 0, n);
+	// n /= sizeof(double);
+	// nFrames -= n;
+	// out1 += n;
+	// }
+	// output nFrames from outputBuffer
+	audioLeftOutputBuffer.GetToBuf(0, leftOutput, nFrames * sizeof(double));
+	audioLeftOutputBuffer.Advance(nFrames * sizeof(double));
 
-	int outputQueueSizeInSample = audioOutputQueue.size() / 2;
-	int zerosAdded = 0;
-	if (outputQueueSizeInSample < nFrames) {
-		for (zerosAdded; zerosAdded < nFrames - outputQueueSizeInSample; zerosAdded++) {
-			for (int channel = 0; channel < 2; channel++) {
-				outputs[channel][zerosAdded] = 0;
-			}
-		}
-	}
-
-	for (int i = zerosAdded; i < nFrames; i++) {
-		for (int channel = 0; channel < 2; channel++) {
-			outputs[channel][i] = audioOutputQueue.front();
-			audioOutputQueue.pop();
-
-		}
-	}
+	audioRightOutputBuffer.GetToBuf(0, rightOutput, nFrames * sizeof(double));
+	audioRightOutputBuffer.Advance(nFrames * sizeof(double));
 
 	free(ti);
 }

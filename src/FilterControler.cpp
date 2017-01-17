@@ -32,6 +32,7 @@ double** FilterControler::process(double** inputs, int nframes){
 	case FILTER_MODE_LOWPASS:
 		lowPassFilter->process(nframes,inputs);
 		//lowPassFilterSO->process(nframes, inputs);
+		
 		break;
 	case FILTER_MODE_HIGHPASS:
 		highPassFilter->process(nframes, inputs);

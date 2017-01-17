@@ -39,11 +39,12 @@ private:
 	std::queue<double> audioInputQueue;
 	std::queue<double> audioOutputQueue;
 
-	double **audioInputBuffer;
-	double **audioOutputBuffer;
+	WDL_FastQueue audioLeftInputBuffer;
+	WDL_FastQueue audioRightInputBuffer;
 
-	int audioInputBufferIndex = 0;
-	int audioOutputBufferIndex = 0;
+	WDL_FastQueue audioLeftOutputBuffer;
+	WDL_FastQueue audioRightOutputBuffer;
+
 
 
 	ParameterPrinterControl * parameterPrinter;
