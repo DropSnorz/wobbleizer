@@ -79,7 +79,7 @@ Wobbleizer::Wobbleizer(IPlugInstanceInfo instanceInfo)
   mFattner = Fattner();
   mEffectRack = EffectRack();
 
-  SetLatency(512);
+  SetLatency(PLUG_LATENCY);
 
 
   //arguments are: name, defaultVal, minVal, maxVal, step, label
@@ -278,14 +278,12 @@ void Wobbleizer::ProcessDoubleReplacing(double** inputs, double** outputs, int n
 	double lfoFilterModulation;
 
 
-	// nFrames to processingBuffer
 	audioLeftInputBuffer.Add(leftInput, nFrames * sizeof(double));
 	audioRightInputBuffer.Add(rightInput, nFrames * sizeof(double));
 
-
 	while (audioLeftInputBuffer.Available() >= sizeof(double)*BUFFER_SIZE) {
 		double** data;
-
+		
 		data = (double**)malloc(2 * sizeof(double**));
 		data[0] = (double*)malloc(BUFFER_SIZE * sizeof(double));
 		data[1] = (double*)malloc(BUFFER_SIZE * sizeof(double));
@@ -297,16 +295,12 @@ void Wobbleizer::ProcessDoubleReplacing(double** inputs, double** outputs, int n
 		audioRightInputBuffer.Advance(BUFFER_SIZE * sizeof(double));
 
 
-		//Do some stuff here 
 		lfoFilterModulation = mLFO.reachSample(BUFFER_SIZE) * mLFOFilterModAmount;
 
 		mFilter.setCutoffMod(lfoFilterModulation);
 		mFilter.process(data, BUFFER_SIZE);
+		mFattner.process(data, BUFFER_SIZE);
 
-		//mFattner.process(data, BUFFER_SIZE);
-
-
-		// Add processed data to outputBuffer
 		audioLeftOutputBuffer.Add(data[0], BUFFER_SIZE * sizeof(double));
 		audioRightOutputBuffer.Add(data[1], BUFFER_SIZE * sizeof(double));
 
@@ -315,15 +309,7 @@ void Wobbleizer::ProcessDoubleReplacing(double** inputs, double** outputs, int n
 		free(data);
 
 	}
-	// Not necessary if you have pre-added zeros to outputBuffer:
-	// if (outputBuffer.Available() < nFrames*sizeof(double)) {
-	// int n = nFrames*sizeof(double) - outputBuffer.Available();
-	// memset(out1, 0, n);
-	// n /= sizeof(double);
-	// nFrames -= n;
-	// out1 += n;
-	// }
-	// output nFrames from outputBuffer
+
 	audioLeftOutputBuffer.GetToBuf(0, leftOutput, nFrames * sizeof(double));
 	audioLeftOutputBuffer.Advance(nFrames * sizeof(double));
 

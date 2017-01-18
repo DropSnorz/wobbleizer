@@ -35,7 +35,7 @@ private:
 	double mLFOFilterModAmount;
 	bool mRearmOnFrequencyUpdate;
 
-#define BUFFER_SIZE 1024
+#define BUFFER_SIZE 128
 	std::queue<double> audioInputQueue;
 	std::queue<double> audioOutputQueue;
 
