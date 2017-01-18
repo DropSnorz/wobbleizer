@@ -19,7 +19,7 @@ def main():
   MinorStr = "" 
   BugfixStr = ""
 
-  for line in fileinput.input(scriptpath + "/resource.h",inplace=0):
+  for line in fileinput.input(scriptpath + "/src/resource.h",inplace=0):
     if "#define PLUG_VER " in line:
       FullVersion = int(line.lstrip( "#define PLUG_VER "), 16)
       major = FullVersion & 0xFFFF0000
