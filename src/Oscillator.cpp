@@ -116,10 +116,8 @@ double Oscillator::getFrequencyFromQuantization(){
 		frequency = frequencyfromDotQuantization(64);
 		break;
 	default:
-
 		frequency = 1;
 		break;
-
 	}
 	return frequency;
 }
@@ -225,8 +223,8 @@ double Oscillator::reachSample(int sampleCount){
 	for (int i = 0; i < sampleCount - 1; i++){
 		nextSample();
 	}
-	return nextSample();
 
+	return nextSample();
 }
 
 
@@ -244,10 +242,25 @@ double Oscillator::nextSample() {
 			break;
 		case OSCILLATOR_MODE_SAW:
 
-			value = 1.0 - (2.0 * mPhase / twoPI);
+			if (phase > twoPI - 0.4) {
+				value = 2 * phase - (2 * twoPI - 0.4);
+			}
+			else {
+				value = 1.0 - (2.0 * phase / twoPI);
+			}
 			break;
 		case OSCILLATOR_MODE_SQUARE:
-			if (phase <= mPI) {
+
+			if (phase < 0.2) {
+				value = 5 * phase;
+			}
+			else if (phase > mPI - 0.2 && phase < mPI + 0.2) {
+				value = (-5 * phase) + (5 * mPI);
+			}
+			else if (phase > twoPI - 0.2) {
+				value = (5 * phase) - (10 * mPI);
+			}
+			else if (phase <=mPI) {
 				value = 1.0;
 			}
 			else {
@@ -256,17 +269,19 @@ double Oscillator::nextSample() {
 			break;
 		case OSCILLATOR_MODE_TRIANGLE:
 
-			value = -1.0 + (2.0 * mPhase / twoPI);
-			value = 2.0 * (fabs(value) - 0.5);
-
+			value = (-1 + 2.0 * (mPhase / twoPI));
+			value = - 2.0 * (fabs(value) - 0.5);
 			break;
 		}
+
 		mPhase += mPhaseIncrement;
 		while (mPhase + mOffset >= twoPI) {
 			mPhase -= twoPI;
 		}
+
 		return value;
 	}
+
 double Oscillator::frequencyfromQuantization(double coef){
 	return ((mTempo / 60.0) / 4.0) * coef;
 }
@@ -274,6 +289,7 @@ double Oscillator::frequencyfromQuantization(double coef){
 double Oscillator::frequencyfromTierceQuantization(double coef){
 	return (((mTempo / 60.0) / 4.0) * coef) * (3.0 / 2.0);
 }
+
 double Oscillator::frequencyfromDotQuantization(double coef){
 	return  ((mTempo / 60.0 / 4.0) * coef) * (2.0 / 3.0);
 

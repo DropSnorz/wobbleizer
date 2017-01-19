@@ -17,8 +17,8 @@
 
 
 // Format        0xMAJR.MN.BG - in HEX! so version 10.1.5 would be 0x000A0105
-#define PLUG_VER 0x00001500
-#define VST3_VER_STR "0.21.0"
+#define PLUG_VER 0x00001600
+#define VST3_VER_STR "0.22.0"
 
 // http://service.steinberg.de/databases/plugin.nsf/plugIn?openForm
 // 4 chars, single quotes. At least one capital letter
@@ -46,7 +46,7 @@ instrument determined by PLUG _IS _INST
 
 #define PLUG_CHANNEL_IO "1-1 2-2"
 
-#define PLUG_LATENCY 128
+#define PLUG_LATENCY 64
 #define PLUG_IS_INST 0
 
 // if this is 0 RTAS can't get tempo info
