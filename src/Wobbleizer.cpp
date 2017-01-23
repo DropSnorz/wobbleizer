@@ -225,11 +225,13 @@ Wobbleizer::Wobbleizer(IPlugInstanceInfo instanceInfo)
   parameterPrinter = new ParameterPrinterControl(this, printerRect, &COLOR_TRANSPARENT);
   pGraphics->AttachControl(parameterPrinter);
 
+#ifdef _DEBUG
   IRECT debugRect(480, 360, 600, 375);
   IBitmap debugBackground = pGraphics->LoadIBitmap(DEBUG_BACKGROUND_ID, DEBUG_BACKGROUND_FN);
   debugPanel = new DebugPanelControl(this, 260, 175, &debugBackground, debugRect);
   pGraphics->AttachControl(debugPanel);
-  
+#endif
+
 
   //pGraphics->ShowControlBounds(true);
 
@@ -268,7 +270,9 @@ void Wobbleizer::ProcessDoubleReplacing(double** inputs, double** outputs, int n
 	
 	mRearmClock.setTempo(currentTempo);
 	if (mRearmClock.getNeedRearm(tivalue)){
+#ifdef _DEBUG
 		debugPanel->Print(">AUDIO CORE : LFO PHASE REARMED");
+#endif
 		mLFO.resetPhase();
 	}
 	
@@ -351,7 +355,6 @@ void Wobbleizer::OnParamChange(int paramIdx)
 		mLFO.setMode(static_cast<OscillatorMode>(GetParam(kLFOWave)->Int()));
 		break;
 	case kLFOAmount:
-
 		mod = GetParam(kLFOAmount)->Value();
 
 		if (mod == 0.0){
@@ -361,7 +364,6 @@ void Wobbleizer::OnParamChange(int paramIdx)
 		else{
 			mLFO.setMuted(false);
 			mLFOFilterModAmount = mod;
-
 		}
 		break;
 	case kLFOOffset:
@@ -387,19 +389,23 @@ void Wobbleizer::OnParamChange(int paramIdx)
 	case kLFOFrequency:{
 		double newDValue = GetParam(kLFOFrequency)->Value();
 		if (newDValue != mLFO.getFrequency() && !mLFO.getIsSynced() && mRearmOnFrequencyUpdate){
+#ifdef _DEBUG
 			debugPanel->Print(">PARAMETER UPDATE > AUDIO CORE > LFO PHASE REARMED");
+#endif
 			mLFO.resetPhase();
 		}
 		mLFO.setFrequency(newDValue);
 	}
-
 		break;
 	
 	case kLFOSyncedFrequency:{
 
 		SyncedQuantization newValue = static_cast<SyncedQuantization>(GetParam(kLFOSyncedFrequency)->Int());
 		if (newValue != mLFO.getQuantization() && mLFO.getIsSynced() && mRearmOnFrequencyUpdate){
+
+#ifdef _DEBUG
 			debugPanel->Print(">PARAMETER UPDATE > AUDIO CORE > LFO PHASE REARMED");
+#endif
 			mLFO.resetPhase();
 		}
 		mLFO.setQuantization(newValue);
@@ -447,15 +453,14 @@ void Wobbleizer::OnParamChange(int paramIdx)
 		}
 	}
 
-
 	//DebugPrinter update
-	
+#ifdef _DEBUG
 	char debugText[200];
 	strcpy(debugText, ">PARAMETER UPDATE: ");
 	strcat(debugText, GetParam(paramIdx)->GetNameForHost());
 	strcat(debugText, " VALUE ");
 	strcat(debugText, valueDisplay);
 	debugPanel->Print(debugText);
-	
+#endif	
 
 }

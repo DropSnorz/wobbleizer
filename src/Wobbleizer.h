@@ -45,10 +45,11 @@ private:
 	WDL_FastQueue audioLeftOutputBuffer;
 	WDL_FastQueue audioRightOutputBuffer;
 
-
-
 	ParameterPrinterControl * parameterPrinter;
+
+#ifdef _DEBUG
 	DebugPanelControl * debugPanel;
+#endif
 
 };
 

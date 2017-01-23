@@ -23,7 +23,6 @@ void ParameterPrinterControl::SetParameterPairText(char* parameterName, char* pa
 	SetParameterValueText(parameterValue);
 	SetDirty();
 
-	
 }
 
 void ParameterPrinterControl::SetParameterNameText(char* parameterName){
@@ -40,13 +39,11 @@ void ParameterPrinterControl::SetParameterValueText(char* parameterValue){
 
 bool ParameterPrinterControl::Draw(IGraphics* pGraphics)
 {
-	DBGMSG("DRAWING...");
 	mDisplayName.SetFormatted(80, "%s", mParameterName);
 	mDisplayValue.SetFormatted(80, "%s", mParameterValue);
 
 	return (pGraphics->DrawIText(mTextName, mDisplayName.Get(), mRECTName) && pGraphics->DrawIText(mTextValue, mDisplayValue.Get(), mRECTValue));
 
-	return true;
 }
 
 ParameterPrinterControl::~ParameterPrinterControl()
