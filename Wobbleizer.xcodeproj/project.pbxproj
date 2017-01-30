@@ -27,16 +27,15 @@
 
 /* Begin PBXBuildFile section */
 		4F1F1BEA135B1F60003A5BB2 /* wdlendian.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F1F1BE9135B1F60003A5BB2 /* wdlendian.h */; };
-		4F20EECB132C69FE0030E34C /* Wobbleizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52FBBED00D0CF139001C8B8A /* Wobbleizer.cpp */; };
+		4F20EECB132C69FE0030E34C /* src in Sources */ = {isa = PBXBuildFile; fileRef = 52FBBED00D0CF139001C8B8A /* src */; };
 		4F20EF2D132C69FE0030E34C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		4F20EF2E132C69FE0030E34C /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C4DB180D0E51270007A920 /* Carbon.framework */; };
 		4F23B9F313B647A00097A67E /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F23B9E413B647A00097A67E /* knob.png */; };
 		4F23B9FD13B647A00097A67E /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F23B9E413B647A00097A67E /* knob.png */; };
 		4F23BA0C13B647A00097A67E /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F23B9E413B647A00097A67E /* knob.png */; };
 		4F296BDA1678E6C800C0F5C2 /* dfx-au-utilities.c in Sources */ = {isa = PBXBuildFile; fileRef = 4FA88B901444E4C4006CB8DA /* dfx-au-utilities.c */; };
-		4F3AE17B12C0E5E2001FD7A4 /* resource.h in Headers */ = {isa = PBXBuildFile; fileRef = 52FBBED30D0CF143001C8B8A /* resource.h */; };
-		4F3AE17C12C0E5E2001FD7A4 /* Wobbleizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 52FBBED20D0CF13D001C8B8A /* Wobbleizer.h */; };
-		4F3AE1A312C0E5E2001FD7A4 /* Wobbleizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52FBBED00D0CF139001C8B8A /* Wobbleizer.cpp */; };
+		4F3AE17B12C0E5E2001FD7A4 /* src in Headers */ = {isa = PBXBuildFile; fileRef = 52FBBED30D0CF143001C8B8A /* src */; };
+		4F3AE1A312C0E5E2001FD7A4 /* src in Sources */ = {isa = PBXBuildFile; fileRef = 52FBBED00D0CF139001C8B8A /* src */; };
 		4F3AE1D412C0E5E2001FD7A4 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C4DB180D0E51270007A920 /* Carbon.framework */; };
 		4F3AE1D512C0E5E2001FD7A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		4F3AE1D612C0E5E2001FD7A4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E41D920D14C2D600A0943B /* AudioToolbox.framework */; };
@@ -115,9 +114,8 @@
 		4F78DA0813B63CD90032E0F3 /* IPlugAU.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F78D9FC13B63CD90032E0F3 /* IPlugAU.cpp */; };
 		4F78DA0913B63CD90032E0F3 /* IPlugAU.r in Rez */ = {isa = PBXBuildFile; fileRef = 4F78D9FD13B63CD90032E0F3 /* IPlugAU.r */; };
 		4F78DA0A13B63CD90032E0F3 /* IPlugAU_ViewFactory.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4F78D9FE13B63CD90032E0F3 /* IPlugAU_ViewFactory.mm */; };
-		4F78DA5A13B63F150032E0F3 /* Wobbleizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52FBBED00D0CF139001C8B8A /* Wobbleizer.cpp */; };
-		4F78DA7713B640050032E0F3 /* resource.h in Headers */ = {isa = PBXBuildFile; fileRef = 52FBBED30D0CF143001C8B8A /* resource.h */; };
-		4F78DA7813B640050032E0F3 /* Wobbleizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 52FBBED20D0CF13D001C8B8A /* Wobbleizer.h */; };
+		4F78DA5A13B63F150032E0F3 /* src in Sources */ = {isa = PBXBuildFile; fileRef = 52FBBED00D0CF139001C8B8A /* src */; };
+		4F78DA7713B640050032E0F3 /* src in Headers */ = {isa = PBXBuildFile; fileRef = 52FBBED30D0CF143001C8B8A /* src */; };
 		4F78DA8A13B640050032E0F3 /* mutex.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FF016F4134E14E2001447BA /* mutex.h */; };
 		4F78DA8B13B640050032E0F3 /* ptrlist.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FF016F5134E14E2001447BA /* ptrlist.h */; };
 		4F78DA8C13B640050032E0F3 /* wdlstring.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FF016F6134E14E2001447BA /* wdlstring.h */; };
@@ -155,7 +153,7 @@
 		4F78DABB13B640620032E0F3 /* IPlugStandalone.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F78D9EA13B63BE90032E0F3 /* IPlugStandalone.h */; };
 		4F79A34E146304CD00744AED /* IPlugProcessAS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F79A34C146304CD00744AED /* IPlugProcessAS.cpp */; };
 		4F7F5C4613E95EC8002918FD /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F23B9E413B647A00097A67E /* knob.png */; };
-		4F7F5C4913E95EC8002918FD /* Wobbleizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52FBBED00D0CF139001C8B8A /* Wobbleizer.cpp */; };
+		4F7F5C4913E95EC8002918FD /* src in Sources */ = {isa = PBXBuildFile; fileRef = 52FBBED00D0CF139001C8B8A /* src */; };
 		4F7F5C5013E95EC8002918FD /* swell-gdi.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4FD16D0B13B634BF001D0217 /* swell-gdi.mm */; };
 		4F7F5C5113E95EC8002918FD /* IPlugBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F78D8ED13B63BA40032E0F3 /* IPlugBase.cpp */; };
 		4F7F5C5213E95EC8002918FD /* IPlugStructs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F78D8EF13B63BA50032E0F3 /* IPlugStructs.cpp */; };
@@ -186,7 +184,7 @@
 		4F8D4C2913E97794004F7633 /* lice32.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F8D4C1713E976A7004F7633 /* lice32.a */; };
 		4F8D4C2F13E97806004F7633 /* lice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F8D4BCC13E97664004F7633 /* lice.a */; };
 		4F9828B1140A9EB700F3FCC1 /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F23B9E413B647A00097A67E /* knob.png */; };
-		4F9828B6140A9EB700F3FCC1 /* Wobbleizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52FBBED00D0CF139001C8B8A /* Wobbleizer.cpp */; };
+		4F9828B6140A9EB700F3FCC1 /* src in Sources */ = {isa = PBXBuildFile; fileRef = 52FBBED00D0CF139001C8B8A /* src */; };
 		4F9828B7140A9EB700F3FCC1 /* swell-gdi.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4FD16D0B13B634BF001D0217 /* swell-gdi.mm */; };
 		4F9828B8140A9EB700F3FCC1 /* IPlugBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F78D8ED13B63BA40032E0F3 /* IPlugBase.cpp */; };
 		4F9828B9140A9EB700F3FCC1 /* IPlugStructs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F78D8EF13B63BA50032E0F3 /* IPlugStructs.cpp */; };
@@ -223,9 +221,8 @@
 		4F9828DB140A9EB700F3FCC1 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C4DB180D0E51270007A920 /* Carbon.framework */; };
 		4F9828F6140A9EEE00F3FCC1 /* lice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F8D4BCC13E97664004F7633 /* lice.a */; };
 		4FA88B931444E4C4006CB8DA /* dfx-au-utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FA88B911444E4C4006CB8DA /* dfx-au-utilities.h */; };
-		4FB3624F13B648FE00DB6B76 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4FB3624E13B648FE00DB6B76 /* main.mm */; };
 		4FB600161567CB0A0020189A /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F23B9E413B647A00097A67E /* knob.png */; };
-		4FB600181567CB0A0020189A /* Wobbleizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52FBBED00D0CF139001C8B8A /* Wobbleizer.cpp */; };
+		4FB600181567CB0A0020189A /* src in Sources */ = {isa = PBXBuildFile; fileRef = 52FBBED00D0CF139001C8B8A /* src */; };
 		4FB600191567CB0A0020189A /* swell-gdi.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4FD16D0B13B634BF001D0217 /* swell-gdi.mm */; };
 		4FB6001A1567CB0A0020189A /* IPlugBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F78D8ED13B63BA40032E0F3 /* IPlugBase.cpp */; };
 		4FB6001B1567CB0A0020189A /* IPlugStructs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F78D8EF13B63BA50032E0F3 /* IPlugStructs.cpp */; };
@@ -246,8 +243,7 @@
 		4FB6002C1567CB0A0020189A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		4FB6002D1567CB0A0020189A /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C4DB180D0E51270007A920 /* Carbon.framework */; };
 		4FB600551567CBF90020189A /* lice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F8D4BCC13E97664004F7633 /* lice.a */; };
-		4FD16CA213B6327D001D0217 /* app_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FD16CA013B6327C001D0217 /* app_main.cpp */; };
-		4FD16CA313B6327D001D0217 /* app_dialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FD16CA113B6327C001D0217 /* app_dialog.cpp */; };
+		4FD16CA213B6327D001D0217 /* app_wrapper in Sources */ = {isa = PBXBuildFile; fileRef = 4FD16CA013B6327C001D0217 /* app_wrapper */; };
 		4FD16CFC13B63468001D0217 /* swell-appstub.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4FD16CFB13B63468001D0217 /* swell-appstub.mm */; };
 		4FD16D0513B634AA001D0217 /* swell-dlg.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4FD16D0413B634AA001D0217 /* swell-dlg.mm */; };
 		4FD16D0C13B634BF001D0217 /* swell-gdi.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4FD16D0B13B634BF001D0217 /* swell-gdi.mm */; };
@@ -438,18 +434,18 @@
 		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		4F017360154D4BFC0034BE1A /* AAX_CIPlugParameters.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AAX_CIPlugParameters.cpp; path = ../../WDL/IPlug/AAX/AAX_CIPlugParameters.cpp; sourceTree = SOURCE_ROOT; };
-		4F017361154D4BFC0034BE1A /* AAX_CIPlugParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAX_CIPlugParameters.h; path = ../../WDL/IPlug/AAX/AAX_CIPlugParameters.h; sourceTree = SOURCE_ROOT; };
-		4F1F1BE9135B1F60003A5BB2 /* wdlendian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wdlendian.h; path = ../../WDL/wdlendian.h; sourceTree = SOURCE_ROOT; };
+		4F017360154D4BFC0034BE1A /* AAX_CIPlugParameters.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AAX_CIPlugParameters.cpp; path = "../wdl-ol/WDL/IPlug/AAX/AAX_CIPlugParameters.cpp"; sourceTree = SOURCE_ROOT; };
+		4F017361154D4BFC0034BE1A /* AAX_CIPlugParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAX_CIPlugParameters.h; path = "../wdl-ol/WDL/IPlug/AAX/AAX_CIPlugParameters.h"; sourceTree = SOURCE_ROOT; };
+		4F1F1BE9135B1F60003A5BB2 /* wdlendian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wdlendian.h; path = "../wdl-ol/WDL/wdlendian.h"; sourceTree = SOURCE_ROOT; };
 		4F20EF33132C69FE0030E34C /* Wobbleizer.vst */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Wobbleizer.vst; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F23B9E413B647A00097A67E /* knob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = knob.png; path = resources/img/knob.png; sourceTree = "<group>"; };
 		4F23BA1313B647E50097A67E /* Wobbleizer-AU-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Wobbleizer-AU-Info.plist"; path = "resources/Wobbleizer-AU-Info.plist"; sourceTree = "<group>"; };
 		4F23BA1413B647E50097A67E /* Wobbleizer-OSXAPP-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Wobbleizer-OSXAPP-Info.plist"; path = "resources/Wobbleizer-OSXAPP-Info.plist"; sourceTree = "<group>"; };
 		4F23BA1513B647E50097A67E /* Wobbleizer-VST2-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Wobbleizer-VST2-Info.plist"; path = "resources/Wobbleizer-VST2-Info.plist"; sourceTree = "<group>"; };
-		4F3E69041409746500C4D749 /* IPlugVST3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugVST3.cpp; path = ../../WDL/IPlug/IPlugVST3.cpp; sourceTree = SOURCE_ROOT; };
-		4F3E69051409746500C4D749 /* IPlugVST3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugVST3.h; path = ../../WDL/IPlug/IPlugVST3.h; sourceTree = SOURCE_ROOT; };
+		4F3E69041409746500C4D749 /* IPlugVST3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugVST3.cpp; path = "../wdl-ol/WDL/IPlug/IPlugVST3.cpp"; sourceTree = SOURCE_ROOT; };
+		4F3E69051409746500C4D749 /* IPlugVST3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugVST3.h; path = "../wdl-ol/WDL/IPlug/IPlugVST3.h"; sourceTree = SOURCE_ROOT; };
 		4F3E693A1409747300C4D749 /* Wobbleizer-VST3-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Wobbleizer-VST3-Info.plist"; path = "resources/Wobbleizer-VST3-Info.plist"; sourceTree = "<group>"; };
-		4F3EE94513B65A350097B791 /* IPlugOSDetect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugOSDetect.h; path = ../../WDL/IPlug/IPlugOSDetect.h; sourceTree = SOURCE_ROOT; };
+		4F3EE94513B65A350097B791 /* IPlugOSDetect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugOSDetect.h; path = "../wdl-ol/WDL/IPlug/IPlugOSDetect.h"; sourceTree = SOURCE_ROOT; };
 		4F4ACFF5140996A10068A6D4 /* memorystream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = memorystream.cpp; sourceTree = "<group>"; };
 		4F4ACFF6140996A10068A6D4 /* memorystream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = memorystream.h; sourceTree = "<group>"; };
 		4F4ACFF7140996A10068A6D4 /* pluginview.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pluginview.cpp; sourceTree = "<group>"; };
@@ -520,15 +516,15 @@
 		4F4CC38A1549B91100A9EA21 /* AAX_Exports.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AAX_Exports.cpp; path = ../../AAX_SDK/Interfaces/AAX_Exports.cpp; sourceTree = SOURCE_ROOT; };
 		4F4CC38C1549B92900A9EA21 /* CommonDebugSettings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CommonDebugSettings.xcconfig; path = ../../AAX_SDK/ExamplePlugIns/Common/Mac/CommonDebugSettings.xcconfig; sourceTree = SOURCE_ROOT; };
 		4F4CC38D1549B92900A9EA21 /* CommonReleaseSettings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CommonReleaseSettings.xcconfig; path = ../../AAX_SDK/ExamplePlugIns/Common/Mac/CommonReleaseSettings.xcconfig; sourceTree = SOURCE_ROOT; };
-		4F4CC4251549BED600A9EA21 /* IPlugAAX.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugAAX.cpp; path = ../../WDL/IPlug/IPlugAAX.cpp; sourceTree = SOURCE_ROOT; };
-		4F4CC4261549BED600A9EA21 /* IPlugAAX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugAAX.h; path = ../../WDL/IPlug/IPlugAAX.h; sourceTree = SOURCE_ROOT; };
-		4F4CC4401549C15500A9EA21 /* IPlugAAX_Describe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugAAX_Describe.cpp; path = ../../WDL/IPlug/AAX/IPlugAAX_Describe.cpp; sourceTree = SOURCE_ROOT; };
-		4F4F73791576739300C124E3 /* AAX_CIPlugTaperDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAX_CIPlugTaperDelegate.h; path = ../../WDL/IPlug/AAX/AAX_CIPlugTaperDelegate.h; sourceTree = SOURCE_ROOT; };
+		4F4CC4251549BED600A9EA21 /* IPlugAAX.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugAAX.cpp; path = "../wdl-ol/WDL/IPlug/IPlugAAX.cpp"; sourceTree = SOURCE_ROOT; };
+		4F4CC4261549BED600A9EA21 /* IPlugAAX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugAAX.h; path = "../wdl-ol/WDL/IPlug/IPlugAAX.h"; sourceTree = SOURCE_ROOT; };
+		4F4CC4401549C15500A9EA21 /* IPlugAAX_Describe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugAAX_Describe.cpp; path = "../wdl-ol/WDL/IPlug/AAX/IPlugAAX_Describe.cpp"; sourceTree = SOURCE_ROOT; };
+		4F4F73791576739300C124E3 /* AAX_CIPlugTaperDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAX_CIPlugTaperDelegate.h; path = "../wdl-ol/WDL/IPlug/AAX/AAX_CIPlugTaperDelegate.h"; sourceTree = SOURCE_ROOT; };
 		4F78D62313B637200032E0F3 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		4F78D7CF13B637790032E0F3 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
 		4F78D89613B639100032E0F3 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = InfoPlist.strings; sourceTree = "<group>"; };
 		4F78D89813B639100032E0F3 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = MainMenu.xib; sourceTree = "<group>"; };
-		4F78D8BD13B63A4E0032E0F3 /* wdltypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wdltypes.h; path = ../../WDL/wdltypes.h; sourceTree = SOURCE_ROOT; };
+		4F78D8BD13B63A4E0032E0F3 /* wdltypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wdltypes.h; path = "../wdl-ol/WDL/wdltypes.h"; sourceTree = SOURCE_ROOT; };
 		4F78D8BF13B63A700032E0F3 /* RtAudio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RtAudio.cpp; sourceTree = "<group>"; };
 		4F78D8C013B63A700032E0F3 /* RtAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RtAudio.h; sourceTree = "<group>"; };
 		4F78D8C113B63A700032E0F3 /* RtError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RtError.h; sourceTree = "<group>"; };
@@ -536,109 +532,109 @@
 		4F78D8C313B63A700032E0F3 /* RtMidi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RtMidi.h; sourceTree = "<group>"; };
 		4F78D8D213B63B5D0032E0F3 /* aeffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aeffect.h; sourceTree = "<group>"; };
 		4F78D8D313B63B5D0032E0F3 /* aeffectx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aeffectx.h; sourceTree = "<group>"; };
-		4F78D8E613B63BA40032E0F3 /* IPlug_include_in_plug_hdr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlug_include_in_plug_hdr.h; path = ../../WDL/IPlug/IPlug_include_in_plug_hdr.h; sourceTree = SOURCE_ROOT; };
-		4F78D8E813B63BA40032E0F3 /* IPlug_include_in_plug_src.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlug_include_in_plug_src.h; path = ../../WDL/IPlug/IPlug_include_in_plug_src.h; sourceTree = SOURCE_ROOT; };
-		4F78D8E913B63BA40032E0F3 /* IControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IControl.h; path = ../../WDL/IPlug/IControl.h; sourceTree = SOURCE_ROOT; };
-		4F78D8EA13B63BA40032E0F3 /* IKeyboardControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IKeyboardControl.h; path = ../../WDL/IPlug/IKeyboardControl.h; sourceTree = SOURCE_ROOT; };
-		4F78D8EB13B63BA40032E0F3 /* IPlugStandalone.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugStandalone.cpp; path = ../../WDL/IPlug/IPlugStandalone.cpp; sourceTree = SOURCE_ROOT; };
-		4F78D8EC13B63BA40032E0F3 /* IPlugBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugBase.h; path = ../../WDL/IPlug/IPlugBase.h; sourceTree = SOURCE_ROOT; };
-		4F78D8ED13B63BA40032E0F3 /* IPlugBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugBase.cpp; path = ../../WDL/IPlug/IPlugBase.cpp; sourceTree = SOURCE_ROOT; };
-		4F78D8EE13B63BA50032E0F3 /* IGraphicsMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGraphicsMac.h; path = ../../WDL/IPlug/IGraphicsMac.h; sourceTree = SOURCE_ROOT; };
-		4F78D8EF13B63BA50032E0F3 /* IPlugStructs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugStructs.cpp; path = ../../WDL/IPlug/IPlugStructs.cpp; sourceTree = SOURCE_ROOT; };
-		4F78D8F113B63BA50032E0F3 /* Containers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Containers.h; path = ../../WDL/IPlug/Containers.h; sourceTree = SOURCE_ROOT; };
-		4F78D8F213B63BA50032E0F3 /* Hosts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Hosts.h; path = ../../WDL/IPlug/Hosts.h; sourceTree = SOURCE_ROOT; };
-		4F78D8F313B63BA50032E0F3 /* Hosts.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Hosts.cpp; path = ../../WDL/IPlug/Hosts.cpp; sourceTree = SOURCE_ROOT; };
-		4F78D8F513B63BA50032E0F3 /* IGraphicsMac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = IGraphicsMac.mm; path = ../../WDL/IPlug/IGraphicsMac.mm; sourceTree = SOURCE_ROOT; };
-		4F78D8F613B63BA50032E0F3 /* IGraphics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IGraphics.cpp; path = ../../WDL/IPlug/IGraphics.cpp; sourceTree = SOURCE_ROOT; };
-		4F78D8F713B63BA50032E0F3 /* IGraphicsCarbon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IGraphicsCarbon.cpp; path = ../../WDL/IPlug/IGraphicsCarbon.cpp; sourceTree = SOURCE_ROOT; };
-		4F78D8F813B63BA50032E0F3 /* IGraphicsCocoa.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = IGraphicsCocoa.mm; path = ../../WDL/IPlug/IGraphicsCocoa.mm; sourceTree = SOURCE_ROOT; };
-		4F78D8F913B63BA50032E0F3 /* IGraphicsCocoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGraphicsCocoa.h; path = ../../WDL/IPlug/IGraphicsCocoa.h; sourceTree = SOURCE_ROOT; };
-		4F78D8FA13B63BA50032E0F3 /* Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Log.h; path = ../../WDL/IPlug/Log.h; sourceTree = SOURCE_ROOT; };
-		4F78D8FB13B63BA50032E0F3 /* Log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Log.cpp; path = ../../WDL/IPlug/Log.cpp; sourceTree = SOURCE_ROOT; };
-		4F78D8FC13B63BA50032E0F3 /* IPopupMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPopupMenu.h; path = ../../WDL/IPlug/IPopupMenu.h; sourceTree = SOURCE_ROOT; };
-		4F78D8FD13B63BA50032E0F3 /* IPopupMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPopupMenu.cpp; path = ../../WDL/IPlug/IPopupMenu.cpp; sourceTree = SOURCE_ROOT; };
-		4F78D8FE13B63BA50032E0F3 /* IPlugStructs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugStructs.h; path = ../../WDL/IPlug/IPlugStructs.h; sourceTree = SOURCE_ROOT; };
-		4F78D90213B63BA50032E0F3 /* IPlug_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlug_Prefix.pch; path = ../../WDL/IPlug/IPlug_Prefix.pch; sourceTree = SOURCE_ROOT; };
-		4F78D90313B63BA50032E0F3 /* IParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IParam.h; path = ../../WDL/IPlug/IParam.h; sourceTree = SOURCE_ROOT; };
-		4F78D90413B63BA50032E0F3 /* IParam.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IParam.cpp; path = ../../WDL/IPlug/IParam.cpp; sourceTree = SOURCE_ROOT; };
-		4F78D90513B63BA50032E0F3 /* IMidiQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMidiQueue.h; path = ../../WDL/IPlug/IMidiQueue.h; sourceTree = SOURCE_ROOT; };
-		4F78D90713B63BA50032E0F3 /* IGraphicsCarbon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGraphicsCarbon.h; path = ../../WDL/IPlug/IGraphicsCarbon.h; sourceTree = SOURCE_ROOT; };
-		4F78D90813B63BA50032E0F3 /* IGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGraphics.h; path = ../../WDL/IPlug/IGraphics.h; sourceTree = SOURCE_ROOT; };
-		4F78D90913B63BA50032E0F3 /* IControl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IControl.cpp; path = ../../WDL/IPlug/IControl.cpp; sourceTree = SOURCE_ROOT; };
-		4F78D9EA13B63BE90032E0F3 /* IPlugStandalone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugStandalone.h; path = ../../WDL/IPlug/IPlugStandalone.h; sourceTree = SOURCE_ROOT; };
-		4F78D9EC13B63C6A0032E0F3 /* IPlugVST.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugVST.cpp; path = ../../WDL/IPlug/IPlugVST.cpp; sourceTree = SOURCE_ROOT; };
-		4F78D9ED13B63C6A0032E0F3 /* IPlugVST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugVST.h; path = ../../WDL/IPlug/IPlugVST.h; sourceTree = SOURCE_ROOT; };
-		4F78D9FB13B63CD90032E0F3 /* IPlugAU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugAU.h; path = ../../WDL/IPlug/IPlugAU.h; sourceTree = SOURCE_ROOT; };
-		4F78D9FC13B63CD90032E0F3 /* IPlugAU.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugAU.cpp; path = ../../WDL/IPlug/IPlugAU.cpp; sourceTree = SOURCE_ROOT; };
-		4F78D9FD13B63CD90032E0F3 /* IPlugAU.r */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.rez; name = IPlugAU.r; path = ../../WDL/IPlug/IPlugAU.r; sourceTree = SOURCE_ROOT; };
-		4F78D9FE13B63CD90032E0F3 /* IPlugAU_ViewFactory.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = IPlugAU_ViewFactory.mm; path = ../../WDL/IPlug/IPlugAU_ViewFactory.mm; sourceTree = SOURCE_ROOT; };
-		4F78DAEA13B642790032E0F3 /* IGraphicsWin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IGraphicsWin.cpp; path = ../../WDL/IPlug/IGraphicsWin.cpp; sourceTree = SOURCE_ROOT; };
-		4F78DAEB13B642790032E0F3 /* IGraphicsWin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGraphicsWin.h; path = ../../WDL/IPlug/IGraphicsWin.h; sourceTree = SOURCE_ROOT; };
+		4F78D8E613B63BA40032E0F3 /* IPlug_include_in_plug_hdr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlug_include_in_plug_hdr.h; path = "../wdl-ol/WDL/IPlug/IPlug_include_in_plug_hdr.h"; sourceTree = SOURCE_ROOT; };
+		4F78D8E813B63BA40032E0F3 /* IPlug_include_in_plug_src.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlug_include_in_plug_src.h; path = "../wdl-ol/WDL/IPlug/IPlug_include_in_plug_src.h"; sourceTree = SOURCE_ROOT; };
+		4F78D8E913B63BA40032E0F3 /* IControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IControl.h; path = "../wdl-ol/WDL/IPlug/IControl.h"; sourceTree = SOURCE_ROOT; };
+		4F78D8EA13B63BA40032E0F3 /* IKeyboardControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IKeyboardControl.h; path = "../wdl-ol/WDL/IPlug/IKeyboardControl.h"; sourceTree = SOURCE_ROOT; };
+		4F78D8EB13B63BA40032E0F3 /* IPlugStandalone.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugStandalone.cpp; path = "../wdl-ol/WDL/IPlug/IPlugStandalone.cpp"; sourceTree = SOURCE_ROOT; };
+		4F78D8EC13B63BA40032E0F3 /* IPlugBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugBase.h; path = "../wdl-ol/WDL/IPlug/IPlugBase.h"; sourceTree = SOURCE_ROOT; };
+		4F78D8ED13B63BA40032E0F3 /* IPlugBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugBase.cpp; path = "../wdl-ol/WDL/IPlug/IPlugBase.cpp"; sourceTree = SOURCE_ROOT; };
+		4F78D8EE13B63BA50032E0F3 /* IGraphicsMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGraphicsMac.h; path = "../wdl-ol/WDL/IPlug/IGraphicsMac.h"; sourceTree = SOURCE_ROOT; };
+		4F78D8EF13B63BA50032E0F3 /* IPlugStructs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugStructs.cpp; path = "../wdl-ol/WDL/IPlug/IPlugStructs.cpp"; sourceTree = SOURCE_ROOT; };
+		4F78D8F113B63BA50032E0F3 /* Containers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Containers.h; path = "../wdl-ol/WDL/IPlug/Containers.h"; sourceTree = SOURCE_ROOT; };
+		4F78D8F213B63BA50032E0F3 /* Hosts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Hosts.h; path = "../wdl-ol/WDL/IPlug/Hosts.h"; sourceTree = SOURCE_ROOT; };
+		4F78D8F313B63BA50032E0F3 /* Hosts.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Hosts.cpp; path = "../wdl-ol/WDL/IPlug/Hosts.cpp"; sourceTree = SOURCE_ROOT; };
+		4F78D8F513B63BA50032E0F3 /* IGraphicsMac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = IGraphicsMac.mm; path = "../wdl-ol/WDL/IPlug/IGraphicsMac.mm"; sourceTree = SOURCE_ROOT; };
+		4F78D8F613B63BA50032E0F3 /* IGraphics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IGraphics.cpp; path = "../wdl-ol/WDL/IPlug/IGraphics.cpp"; sourceTree = SOURCE_ROOT; };
+		4F78D8F713B63BA50032E0F3 /* IGraphicsCarbon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IGraphicsCarbon.cpp; path = "../wdl-ol/WDL/IPlug/IGraphicsCarbon.cpp"; sourceTree = SOURCE_ROOT; };
+		4F78D8F813B63BA50032E0F3 /* IGraphicsCocoa.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = IGraphicsCocoa.mm; path = "../wdl-ol/WDL/IPlug/IGraphicsCocoa.mm"; sourceTree = SOURCE_ROOT; };
+		4F78D8F913B63BA50032E0F3 /* IGraphicsCocoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGraphicsCocoa.h; path = "../wdl-ol/WDL/IPlug/IGraphicsCocoa.h"; sourceTree = SOURCE_ROOT; };
+		4F78D8FA13B63BA50032E0F3 /* Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Log.h; path = "../wdl-ol/WDL/IPlug/Log.h"; sourceTree = SOURCE_ROOT; };
+		4F78D8FB13B63BA50032E0F3 /* Log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Log.cpp; path = "../wdl-ol/WDL/IPlug/Log.cpp"; sourceTree = SOURCE_ROOT; };
+		4F78D8FC13B63BA50032E0F3 /* IPopupMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPopupMenu.h; path = "../wdl-ol/WDL/IPlug/IPopupMenu.h"; sourceTree = SOURCE_ROOT; };
+		4F78D8FD13B63BA50032E0F3 /* IPopupMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPopupMenu.cpp; path = "../wdl-ol/WDL/IPlug/IPopupMenu.cpp"; sourceTree = SOURCE_ROOT; };
+		4F78D8FE13B63BA50032E0F3 /* IPlugStructs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugStructs.h; path = "../wdl-ol/WDL/IPlug/IPlugStructs.h"; sourceTree = SOURCE_ROOT; };
+		4F78D90213B63BA50032E0F3 /* IPlug_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlug_Prefix.pch; path = "../wdl-ol/WDL/IPlug/IPlug_Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		4F78D90313B63BA50032E0F3 /* IParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IParam.h; path = "../wdl-ol/WDL/IPlug/IParam.h"; sourceTree = SOURCE_ROOT; };
+		4F78D90413B63BA50032E0F3 /* IParam.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IParam.cpp; path = "../wdl-ol/WDL/IPlug/IParam.cpp"; sourceTree = SOURCE_ROOT; };
+		4F78D90513B63BA50032E0F3 /* IMidiQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMidiQueue.h; path = "../wdl-ol/WDL/IPlug/IMidiQueue.h"; sourceTree = SOURCE_ROOT; };
+		4F78D90713B63BA50032E0F3 /* IGraphicsCarbon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGraphicsCarbon.h; path = "../wdl-ol/WDL/IPlug/IGraphicsCarbon.h"; sourceTree = SOURCE_ROOT; };
+		4F78D90813B63BA50032E0F3 /* IGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGraphics.h; path = "../wdl-ol/WDL/IPlug/IGraphics.h"; sourceTree = SOURCE_ROOT; };
+		4F78D90913B63BA50032E0F3 /* IControl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IControl.cpp; path = "../wdl-ol/WDL/IPlug/IControl.cpp"; sourceTree = SOURCE_ROOT; };
+		4F78D9EA13B63BE90032E0F3 /* IPlugStandalone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugStandalone.h; path = "../wdl-ol/WDL/IPlug/IPlugStandalone.h"; sourceTree = SOURCE_ROOT; };
+		4F78D9EC13B63C6A0032E0F3 /* IPlugVST.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugVST.cpp; path = "../wdl-ol/WDL/IPlug/IPlugVST.cpp"; sourceTree = SOURCE_ROOT; };
+		4F78D9ED13B63C6A0032E0F3 /* IPlugVST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugVST.h; path = "../wdl-ol/WDL/IPlug/IPlugVST.h"; sourceTree = SOURCE_ROOT; };
+		4F78D9FB13B63CD90032E0F3 /* IPlugAU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugAU.h; path = "../wdl-ol/WDL/IPlug/IPlugAU.h"; sourceTree = SOURCE_ROOT; };
+		4F78D9FC13B63CD90032E0F3 /* IPlugAU.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugAU.cpp; path = "../wdl-ol/WDL/IPlug/IPlugAU.cpp"; sourceTree = SOURCE_ROOT; };
+		4F78D9FD13B63CD90032E0F3 /* IPlugAU.r */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.rez; name = IPlugAU.r; path = "../wdl-ol/WDL/IPlug/IPlugAU.r"; sourceTree = SOURCE_ROOT; };
+		4F78D9FE13B63CD90032E0F3 /* IPlugAU_ViewFactory.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = IPlugAU_ViewFactory.mm; path = "../wdl-ol/WDL/IPlug/IPlugAU_ViewFactory.mm"; sourceTree = SOURCE_ROOT; };
+		4F78DAEA13B642790032E0F3 /* IGraphicsWin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IGraphicsWin.cpp; path = "../wdl-ol/WDL/IPlug/IGraphicsWin.cpp"; sourceTree = SOURCE_ROOT; };
+		4F78DAEB13B642790032E0F3 /* IGraphicsWin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGraphicsWin.h; path = "../wdl-ol/WDL/IPlug/IGraphicsWin.h"; sourceTree = SOURCE_ROOT; };
 		4F78DB5F13B6462B0032E0F3 /* Wobbleizer.component */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Wobbleizer.component; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F79A34C146304CD00744AED /* IPlugProcessAS.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugProcessAS.cpp; path = ../../WDL/IPlug/RTAS/IPlugProcessAS.cpp; sourceTree = "<group>"; };
-		4F79A34D146304CD00744AED /* IPlugProcessAS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugProcessAS.h; path = ../../WDL/IPlug/RTAS/IPlugProcessAS.h; sourceTree = "<group>"; };
+		4F79A34C146304CD00744AED /* IPlugProcessAS.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugProcessAS.cpp; path = "../wdl-ol/WDL/IPlug/RTAS/IPlugProcessAS.cpp"; sourceTree = "<group>"; };
+		4F79A34D146304CD00744AED /* IPlugProcessAS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugProcessAS.h; path = "../wdl-ol/WDL/IPlug/RTAS/IPlugProcessAS.h"; sourceTree = "<group>"; };
 		4F7F5C0C13E95DDC002918FD /* Wobbleizer-RTAS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Wobbleizer-RTAS-Info.plist"; path = "resources/Wobbleizer-RTAS-Info.plist"; sourceTree = "<group>"; };
 		4F7F5C6813E95EC8002918FD /* Wobbleizer.dpm */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Wobbleizer.dpm; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F7F5C6F13E95FB2002918FD /* IPlugRTAS.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugRTAS.cpp; path = ../../WDL/IPlug/IPlugRTAS.cpp; sourceTree = SOURCE_ROOT; };
-		4F7F5C7013E95FB2002918FD /* IPlugRTAS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugRTAS.h; path = ../../WDL/IPlug/IPlugRTAS.h; sourceTree = SOURCE_ROOT; };
-		4F7F5C9B13E9607A002918FD /* digicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = digicode.h; path = ../../WDL/IPlug/RTAS/digicode.h; sourceTree = "<group>"; };
-		4F7F5C9C13E9607A002918FD /* digicode1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = digicode1.cpp; path = ../../WDL/IPlug/RTAS/digicode1.cpp; sourceTree = "<group>"; };
-		4F7F5C9D13E9607A002918FD /* digicode2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = digicode2.cpp; path = ../../WDL/IPlug/RTAS/digicode2.cpp; sourceTree = "<group>"; };
-		4F7F5C9E13E9607A002918FD /* digicode3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = digicode3.cpp; path = ../../WDL/IPlug/RTAS/digicode3.cpp; sourceTree = "<group>"; };
-		4F7F5C9F13E9607A002918FD /* EditorInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditorInterface.h; path = ../../WDL/IPlug/RTAS/EditorInterface.h; sourceTree = "<group>"; };
-		4F7F5CA013E9607A002918FD /* IPlugCustomUI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugCustomUI.cpp; path = ../../WDL/IPlug/RTAS/IPlugCustomUI.cpp; sourceTree = "<group>"; };
-		4F7F5CA113E9607A002918FD /* IPlugCustomUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugCustomUI.h; path = ../../WDL/IPlug/RTAS/IPlugCustomUI.h; sourceTree = "<group>"; };
-		4F7F5CA213E9607A002918FD /* IPlugDigiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugDigiView.h; path = ../../WDL/IPlug/RTAS/IPlugDigiView.h; sourceTree = "<group>"; };
-		4F7F5CA313E9607A002918FD /* IPlugGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugGroup.cpp; path = ../../WDL/IPlug/RTAS/IPlugGroup.cpp; sourceTree = "<group>"; };
-		4F7F5CA413E9607A002918FD /* IPlugGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugGroup.h; path = ../../WDL/IPlug/RTAS/IPlugGroup.h; sourceTree = "<group>"; };
-		4F7F5CA513E9607A002918FD /* IPlugProcess.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugProcess.cpp; path = ../../WDL/IPlug/RTAS/IPlugProcess.cpp; sourceTree = "<group>"; };
-		4F7F5CA613E9607A002918FD /* IPlugProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugProcess.h; path = ../../WDL/IPlug/RTAS/IPlugProcess.h; sourceTree = "<group>"; };
-		4F7F5CA713E9607A002918FD /* IPlugProcessRTAS.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugProcessRTAS.cpp; path = ../../WDL/IPlug/RTAS/IPlugProcessRTAS.cpp; sourceTree = "<group>"; };
-		4F7F5CA813E9607A002918FD /* IPlugProcessRTAS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugProcessRTAS.h; path = ../../WDL/IPlug/RTAS/IPlugProcessRTAS.h; sourceTree = "<group>"; };
-		4F7F5CAA13E9607A002918FD /* ProcessInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProcessInterface.h; path = ../../WDL/IPlug/RTAS/ProcessInterface.h; sourceTree = "<group>"; };
+		4F7F5C6F13E95FB2002918FD /* IPlugRTAS.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugRTAS.cpp; path = "../wdl-ol/WDL/IPlug/IPlugRTAS.cpp"; sourceTree = SOURCE_ROOT; };
+		4F7F5C7013E95FB2002918FD /* IPlugRTAS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugRTAS.h; path = "../wdl-ol/WDL/IPlug/IPlugRTAS.h"; sourceTree = SOURCE_ROOT; };
+		4F7F5C9B13E9607A002918FD /* digicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = digicode.h; path = "../wdl-ol/WDL/IPlug/RTAS/digicode.h"; sourceTree = "<group>"; };
+		4F7F5C9C13E9607A002918FD /* digicode1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = digicode1.cpp; path = "../wdl-ol/WDL/IPlug/RTAS/digicode1.cpp"; sourceTree = "<group>"; };
+		4F7F5C9D13E9607A002918FD /* digicode2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = digicode2.cpp; path = "../wdl-ol/WDL/IPlug/RTAS/digicode2.cpp"; sourceTree = "<group>"; };
+		4F7F5C9E13E9607A002918FD /* digicode3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = digicode3.cpp; path = "../wdl-ol/WDL/IPlug/RTAS/digicode3.cpp"; sourceTree = "<group>"; };
+		4F7F5C9F13E9607A002918FD /* EditorInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditorInterface.h; path = "../wdl-ol/WDL/IPlug/RTAS/EditorInterface.h"; sourceTree = "<group>"; };
+		4F7F5CA013E9607A002918FD /* IPlugCustomUI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugCustomUI.cpp; path = "../wdl-ol/WDL/IPlug/RTAS/IPlugCustomUI.cpp"; sourceTree = "<group>"; };
+		4F7F5CA113E9607A002918FD /* IPlugCustomUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugCustomUI.h; path = "../wdl-ol/WDL/IPlug/RTAS/IPlugCustomUI.h"; sourceTree = "<group>"; };
+		4F7F5CA213E9607A002918FD /* IPlugDigiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugDigiView.h; path = "../wdl-ol/WDL/IPlug/RTAS/IPlugDigiView.h"; sourceTree = "<group>"; };
+		4F7F5CA313E9607A002918FD /* IPlugGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugGroup.cpp; path = "../wdl-ol/WDL/IPlug/RTAS/IPlugGroup.cpp"; sourceTree = "<group>"; };
+		4F7F5CA413E9607A002918FD /* IPlugGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugGroup.h; path = "../wdl-ol/WDL/IPlug/RTAS/IPlugGroup.h"; sourceTree = "<group>"; };
+		4F7F5CA513E9607A002918FD /* IPlugProcess.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugProcess.cpp; path = "../wdl-ol/WDL/IPlug/RTAS/IPlugProcess.cpp"; sourceTree = "<group>"; };
+		4F7F5CA613E9607A002918FD /* IPlugProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugProcess.h; path = "../wdl-ol/WDL/IPlug/RTAS/IPlugProcess.h"; sourceTree = "<group>"; };
+		4F7F5CA713E9607A002918FD /* IPlugProcessRTAS.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugProcessRTAS.cpp; path = "../wdl-ol/WDL/IPlug/RTAS/IPlugProcessRTAS.cpp"; sourceTree = "<group>"; };
+		4F7F5CA813E9607A002918FD /* IPlugProcessRTAS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugProcessRTAS.h; path = "../wdl-ol/WDL/IPlug/RTAS/IPlugProcessRTAS.h"; sourceTree = "<group>"; };
+		4F7F5CAA13E9607A002918FD /* ProcessInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProcessInterface.h; path = "../wdl-ol/WDL/IPlug/RTAS/ProcessInterface.h"; sourceTree = "<group>"; };
 		4F7F5CAB13E9607A002918FD /* CommonDebugSettings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CommonDebugSettings.xcconfig; path = ../../PT9_SDK/AlturaPorts/TDMPlugIns/common/Mac/CommonDebugSettings.xcconfig; sourceTree = SOURCE_ROOT; };
 		4F7F5CAC13E9607A002918FD /* CommonReleaseSettings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CommonReleaseSettings.xcconfig; path = ../../PT9_SDK/AlturaPorts/TDMPlugIns/common/Mac/CommonReleaseSettings.xcconfig; sourceTree = SOURCE_ROOT; };
 		4F7F5CF613E96564002918FD /* System.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = System.framework; path = /System/Library/Frameworks/System.framework; sourceTree = "<absolute>"; };
-		4F7F5D2413E9681E002918FD /* IPlugRTAS.r */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.rez; name = IPlugRTAS.r; path = ../../WDL/IPlug/RTAS/IPlugRTAS.r; sourceTree = "<group>"; };
+		4F7F5D2413E9681E002918FD /* IPlugRTAS.r */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.rez; name = IPlugRTAS.r; path = "../wdl-ol/WDL/IPlug/RTAS/IPlugRTAS.r"; sourceTree = "<group>"; };
 		4F8B6747158B4F53002FC25B /* PluginLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PluginLibrary.xcodeproj; path = ../../PT9_SDK/AlturaPorts/TDMPlugIns/PlugInLibrary/MacBuild/PluginLibrary.xcodeproj; sourceTree = SOURCE_ROOT; };
-		4F8D4BC413E97664004F7633 /* lice.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = lice.xcodeproj; path = ../../WDL/lice/lice.xcodeproj; sourceTree = SOURCE_ROOT; };
+		4F8D4BC413E97664004F7633 /* lice.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = lice.xcodeproj; path = "../wdl-ol/WDL/lice/lice.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		4F9828E0140A9EB700F3FCC1 /* Wobbleizer.vst3 */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Wobbleizer.vst3; sourceTree = BUILT_PRODUCTS_DIR; };
-		4FA88B901444E4C4006CB8DA /* dfx-au-utilities.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "dfx-au-utilities.c"; path = "../../WDL/IPlug/dfx/dfx-au-utilities.c"; sourceTree = SOURCE_ROOT; };
-		4FA88B911444E4C4006CB8DA /* dfx-au-utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "dfx-au-utilities.h"; path = "../../WDL/IPlug/dfx/dfx-au-utilities.h"; sourceTree = SOURCE_ROOT; };
-		4FB3624E13B648FE00DB6B76 /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = main.mm; path = app_wrapper/main.mm; sourceTree = "<group>"; };
+		4FA88B901444E4C4006CB8DA /* dfx-au-utilities.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "dfx-au-utilities.c"; path = "../wdl-ol/WDL/IPlug/dfx/dfx-au-utilities.c"; sourceTree = SOURCE_ROOT; };
+		4FA88B911444E4C4006CB8DA /* dfx-au-utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "dfx-au-utilities.h"; path = "../wdl-ol/WDL/IPlug/dfx/dfx-au-utilities.h"; sourceTree = SOURCE_ROOT; };
+		4FB3624E13B648FE00DB6B76 /* app_wrapper */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = app_wrapper; path = src/app_wrapper; sourceTree = "<group>"; };
 		4FB600331567CB0A0020189A /* Wobbleizer.aaxplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Wobbleizer.aaxplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FCF15AF133124D1009A6277 /* Wobbleizer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Wobbleizer.xcconfig; sourceTree = "<group>"; };
 		4FD16A0913B63081001D0217 /* Wobbleizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wobbleizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4FD16C9E13B6327C001D0217 /* app_resource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = app_resource.h; path = app_wrapper/app_resource.h; sourceTree = "<group>"; };
-		4FD16C9F13B6327C001D0217 /* app_main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = app_main.h; path = app_wrapper/app_main.h; sourceTree = "<group>"; };
-		4FD16CA013B6327C001D0217 /* app_main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = app_main.cpp; path = app_wrapper/app_main.cpp; sourceTree = "<group>"; };
-		4FD16CA113B6327C001D0217 /* app_dialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = app_dialog.cpp; path = app_wrapper/app_dialog.cpp; sourceTree = "<group>"; };
-		4FD16CFB13B63468001D0217 /* swell-appstub.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "swell-appstub.mm"; path = "../../WDL/swell/swell-appstub.mm"; sourceTree = SOURCE_ROOT; };
-		4FD16D0213B63489001D0217 /* swell-menugen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "swell-menugen.h"; path = "../../WDL/swell/swell-menugen.h"; sourceTree = SOURCE_ROOT; };
-		4FD16D0313B63494001D0217 /* swell-dlggen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "swell-dlggen.h"; path = "../../WDL/swell/swell-dlggen.h"; sourceTree = SOURCE_ROOT; };
-		4FD16D0413B634AA001D0217 /* swell-dlg.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "swell-dlg.mm"; path = "../../WDL/swell/swell-dlg.mm"; sourceTree = SOURCE_ROOT; };
-		4FD16D0B13B634BF001D0217 /* swell-gdi.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "swell-gdi.mm"; path = "../../WDL/swell/swell-gdi.mm"; sourceTree = SOURCE_ROOT; };
-		4FD16D1513B634D2001D0217 /* swell-ini.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "swell-ini.cpp"; path = "../../WDL/swell/swell-ini.cpp"; sourceTree = SOURCE_ROOT; };
-		4FD16D1713B634E5001D0217 /* swell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = swell.h; path = ../../WDL/swell/swell.h; sourceTree = SOURCE_ROOT; };
-		4FD16D2213B6351C001D0217 /* swell-functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "swell-functions.h"; path = "../../WDL/swell/swell-functions.h"; sourceTree = SOURCE_ROOT; };
-		4FD16D2B13B6353C001D0217 /* swell-internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "swell-internal.h"; path = "../../WDL/swell/swell-internal.h"; sourceTree = SOURCE_ROOT; };
-		4FD16D3013B6355A001D0217 /* swell-types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "swell-types.h"; path = "../../WDL/swell/swell-types.h"; sourceTree = SOURCE_ROOT; };
-		4FD16D3913B63582001D0217 /* swell-kb.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "swell-kb.mm"; path = "../../WDL/swell/swell-kb.mm"; sourceTree = SOURCE_ROOT; };
-		4FD16D3B13B6358C001D0217 /* swell-miscdlg.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "swell-miscdlg.mm"; path = "../../WDL/swell/swell-miscdlg.mm"; sourceTree = SOURCE_ROOT; };
-		4FD16D3D13B63595001D0217 /* swell-menu.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "swell-menu.mm"; path = "../../WDL/swell/swell-menu.mm"; sourceTree = SOURCE_ROOT; };
-		4FD16D3F13B635A0001D0217 /* swell-misc.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "swell-misc.mm"; path = "../../WDL/swell/swell-misc.mm"; sourceTree = SOURCE_ROOT; };
-		4FD16D4113B635AB001D0217 /* swell-wnd.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "swell-wnd.mm"; path = "../../WDL/swell/swell-wnd.mm"; sourceTree = SOURCE_ROOT; };
-		4FD16D4313B635B2001D0217 /* swell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = swell.cpp; path = ../../WDL/swell/swell.cpp; sourceTree = SOURCE_ROOT; };
-		4FD16D4513B635C8001D0217 /* swellappmain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = swellappmain.h; path = ../../WDL/swell/swellappmain.h; sourceTree = SOURCE_ROOT; };
-		4FD16D4613B635C8001D0217 /* swellappmain.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = swellappmain.mm; path = ../../WDL/swell/swellappmain.mm; sourceTree = SOURCE_ROOT; };
+		4FD16C9E13B6327C001D0217 /* app_wrapper */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = app_wrapper; path = src/app_wrapper; sourceTree = "<group>"; };
+		4FD16C9F13B6327C001D0217 /* app_wrapper */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = app_wrapper; path = src/app_wrapper; sourceTree = "<group>"; };
+		4FD16CA013B6327C001D0217 /* app_wrapper */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = app_wrapper; path = src/app_wrapper; sourceTree = "<group>"; };
+		4FD16CA113B6327C001D0217 /* app_wrapper */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = app_wrapper; path = src/app_wrapper; sourceTree = "<group>"; };
+		4FD16CFB13B63468001D0217 /* swell-appstub.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "swell-appstub.mm"; path = "../wdl-ol/WDL/swell/swell-appstub.mm"; sourceTree = SOURCE_ROOT; };
+		4FD16D0213B63489001D0217 /* swell-menugen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "swell-menugen.h"; path = "../wdl-ol/WDL/swell/swell-menugen.h"; sourceTree = SOURCE_ROOT; };
+		4FD16D0313B63494001D0217 /* swell-dlggen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "swell-dlggen.h"; path = "../wdl-ol/WDL/swell/swell-dlggen.h"; sourceTree = SOURCE_ROOT; };
+		4FD16D0413B634AA001D0217 /* swell-dlg.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "swell-dlg.mm"; path = "../wdl-ol/WDL/swell/swell-dlg.mm"; sourceTree = SOURCE_ROOT; };
+		4FD16D0B13B634BF001D0217 /* swell-gdi.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "swell-gdi.mm"; path = "../wdl-ol/WDL/swell/swell-gdi.mm"; sourceTree = SOURCE_ROOT; };
+		4FD16D1513B634D2001D0217 /* swell-ini.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "swell-ini.cpp"; path = "../wdl-ol/WDL/swell/swell-ini.cpp"; sourceTree = SOURCE_ROOT; };
+		4FD16D1713B634E5001D0217 /* swell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = swell.h; path = "../wdl-ol/WDL/swell/swell.h"; sourceTree = SOURCE_ROOT; };
+		4FD16D2213B6351C001D0217 /* swell-functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "swell-functions.h"; path = "../wdl-ol/WDL/swell/swell-functions.h"; sourceTree = SOURCE_ROOT; };
+		4FD16D2B13B6353C001D0217 /* swell-internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "swell-internal.h"; path = "../wdl-ol/WDL/swell/swell-internal.h"; sourceTree = SOURCE_ROOT; };
+		4FD16D3013B6355A001D0217 /* swell-types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "swell-types.h"; path = "../wdl-ol/WDL/swell/swell-types.h"; sourceTree = SOURCE_ROOT; };
+		4FD16D3913B63582001D0217 /* swell-kb.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "swell-kb.mm"; path = "../wdl-ol/WDL/swell/swell-kb.mm"; sourceTree = SOURCE_ROOT; };
+		4FD16D3B13B6358C001D0217 /* swell-miscdlg.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "swell-miscdlg.mm"; path = "../wdl-ol/WDL/swell/swell-miscdlg.mm"; sourceTree = SOURCE_ROOT; };
+		4FD16D3D13B63595001D0217 /* swell-menu.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "swell-menu.mm"; path = "../wdl-ol/WDL/swell/swell-menu.mm"; sourceTree = SOURCE_ROOT; };
+		4FD16D3F13B635A0001D0217 /* swell-misc.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "swell-misc.mm"; path = "../wdl-ol/WDL/swell/swell-misc.mm"; sourceTree = SOURCE_ROOT; };
+		4FD16D4113B635AB001D0217 /* swell-wnd.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "swell-wnd.mm"; path = "../wdl-ol/WDL/swell/swell-wnd.mm"; sourceTree = SOURCE_ROOT; };
+		4FD16D4313B635B2001D0217 /* swell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = swell.cpp; path = "../wdl-ol/WDL/swell/swell.cpp"; sourceTree = SOURCE_ROOT; };
+		4FD16D4513B635C8001D0217 /* swellappmain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = swellappmain.h; path = "../wdl-ol/WDL/swell/swellappmain.h"; sourceTree = SOURCE_ROOT; };
+		4FD16D4613B635C8001D0217 /* swellappmain.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = swellappmain.mm; path = "../wdl-ol/WDL/swell/swellappmain.mm"; sourceTree = SOURCE_ROOT; };
 		4FD290A8137C34D700CEBE7E /* Wobbleizer.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Wobbleizer.icns; path = resources/Wobbleizer.icns; sourceTree = "<group>"; };
-		4FDA440513F3E4F2000B4551 /* IBitmapMonoText.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IBitmapMonoText.cpp; path = ../../WDL/IPlug/IBitmapMonoText.cpp; sourceTree = SOURCE_ROOT; };
-		4FDA440613F3E4F2000B4551 /* IBitmapMonoText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBitmapMonoText.h; path = ../../WDL/IPlug/IBitmapMonoText.h; sourceTree = SOURCE_ROOT; };
-		4FF016F4134E14E2001447BA /* mutex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mutex.h; path = ../../WDL/mutex.h; sourceTree = SOURCE_ROOT; };
-		4FF016F5134E14E2001447BA /* ptrlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ptrlist.h; path = ../../WDL/ptrlist.h; sourceTree = SOURCE_ROOT; };
-		4FF016F6134E14E2001447BA /* wdlstring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wdlstring.h; path = ../../WDL/wdlstring.h; sourceTree = SOURCE_ROOT; };
-		4FF01719134E153A001447BA /* heapbuf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = heapbuf.h; path = ../../WDL/heapbuf.h; sourceTree = SOURCE_ROOT; };
-		4FF7B0D4156A825000E6CB12 /* common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = common.xcconfig; path = ../../common.xcconfig; sourceTree = SOURCE_ROOT; };
+		4FDA440513F3E4F2000B4551 /* IBitmapMonoText.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IBitmapMonoText.cpp; path = "../wdl-ol/WDL/IPlug/IBitmapMonoText.cpp"; sourceTree = SOURCE_ROOT; };
+		4FDA440613F3E4F2000B4551 /* IBitmapMonoText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBitmapMonoText.h; path = "../wdl-ol/WDL/IPlug/IBitmapMonoText.h"; sourceTree = SOURCE_ROOT; };
+		4FF016F4134E14E2001447BA /* mutex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mutex.h; path = "../wdl-ol/WDL/mutex.h"; sourceTree = SOURCE_ROOT; };
+		4FF016F5134E14E2001447BA /* ptrlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ptrlist.h; path = "../wdl-ol/WDL/ptrlist.h"; sourceTree = SOURCE_ROOT; };
+		4FF016F6134E14E2001447BA /* wdlstring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wdlstring.h; path = "../wdl-ol/WDL/wdlstring.h"; sourceTree = SOURCE_ROOT; };
+		4FF01719134E153A001447BA /* heapbuf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = heapbuf.h; path = "../wdl-ol/WDL/heapbuf.h"; sourceTree = SOURCE_ROOT; };
+		4FF7B0D4156A825000E6CB12 /* wdl-ol */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = "wdl-ol"; path = "../wdl-ol"; sourceTree = SOURCE_ROOT; };
 		4FF7B0F3156A831000E6CB12 /* AAXLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AAXLibrary.xcodeproj; path = ../../AAX_SDK/Libs/AAXLibrary/MacBuild/AAXLibrary.xcodeproj; sourceTree = SOURCE_ROOT; };
 		526F9C010D7DC7D700562CF8 /* Wobbleizer.exp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.exports; path = Wobbleizer.exp; sourceTree = "<group>"; };
 		52C4DB180D0E51270007A920 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
@@ -646,9 +642,9 @@
 		52E41CC40D14C2B000A0943B /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
 		52E41D7E0D14C2D100A0943B /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = /System/Library/Frameworks/AudioUnit.framework; sourceTree = "<absolute>"; };
 		52E41D920D14C2D600A0943B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = /System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<absolute>"; };
-		52FBBED00D0CF139001C8B8A /* Wobbleizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; path = Wobbleizer.cpp; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
-		52FBBED20D0CF13D001C8B8A /* Wobbleizer.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = Wobbleizer.h; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
-		52FBBED30D0CF143001C8B8A /* resource.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = resource.h; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
+		52FBBED00D0CF139001C8B8A /* src */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = folder; path = src; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
+		52FBBED20D0CF13D001C8B8A /* src */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = folder; path = src; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
+		52FBBED30D0CF143001C8B8A /* src */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = folder; path = src; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -731,9 +727,9 @@
 		089C166AFE841209C02AAC07 /* IPlugExample */ = {
 			isa = PBXGroup;
 			children = (
-				52FBBED30D0CF143001C8B8A /* resource.h */,
-				52FBBED20D0CF13D001C8B8A /* Wobbleizer.h */,
-				52FBBED00D0CF139001C8B8A /* Wobbleizer.cpp */,
+				52FBBED30D0CF143001C8B8A /* src */,
+				52FBBED20D0CF13D001C8B8A /* src */,
+				52FBBED00D0CF139001C8B8A /* src */,
 				089C167CFE841241C02AAC07 /* Resources */,
 				32C88E010371C26100C91783 /* Other Sources */,
 				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
@@ -798,7 +794,7 @@
 				4FD16C9D13B6327C001D0217 /* OSX App Wrapper */,
 				526F9C010D7DC7D700562CF8 /* Wobbleizer.exp */,
 				4FCF15AF133124D1009A6277 /* Wobbleizer.xcconfig */,
-				4FF7B0D4156A825000E6CB12 /* common.xcconfig */,
+				4FF7B0D4156A825000E6CB12 /* wdl-ol */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -1052,7 +1048,7 @@
 				4F78D8C313B63A700032E0F3 /* RtMidi.h */,
 			);
 			name = rtaudiomidi;
-			path = ../../WDL/rtaudiomidi;
+			path = "../wdl-ol/WDL/rtaudiomidi";
 			sourceTree = SOURCE_ROOT;
 		};
 		4F78D8D013B63B390032E0F3 /* IPlug */ = {
@@ -1260,12 +1256,12 @@
 		4FD16C9D13B6327C001D0217 /* OSX App Wrapper */ = {
 			isa = PBXGroup;
 			children = (
-				4FB3624E13B648FE00DB6B76 /* main.mm */,
+				4FB3624E13B648FE00DB6B76 /* app_wrapper */,
 				4F78D89413B639100032E0F3 /* English.lproj */,
-				4FD16C9E13B6327C001D0217 /* app_resource.h */,
-				4FD16C9F13B6327C001D0217 /* app_main.h */,
-				4FD16CA013B6327C001D0217 /* app_main.cpp */,
-				4FD16CA113B6327C001D0217 /* app_dialog.cpp */,
+				4FD16C9E13B6327C001D0217 /* app_wrapper */,
+				4FD16C9F13B6327C001D0217 /* app_wrapper */,
+				4FD16CA013B6327C001D0217 /* app_wrapper */,
+				4FD16CA113B6327C001D0217 /* app_wrapper */,
 			);
 			name = "OSX App Wrapper";
 			sourceTree = "<group>";
@@ -1325,6 +1321,7 @@
 				4F78D8BD13B63A4E0032E0F3 /* wdltypes.h */,
 			);
 			name = WDL;
+			path = "../wdl-ol";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1334,8 +1331,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F3AE17B12C0E5E2001FD7A4 /* resource.h in Headers */,
-				4F3AE17C12C0E5E2001FD7A4 /* Wobbleizer.h in Headers */,
+				4F3AE17B12C0E5E2001FD7A4 /* src in Headers */,
 				4FF016F7134E14E2001447BA /* mutex.h in Headers */,
 				4FF016F8134E14E2001447BA /* ptrlist.h in Headers */,
 				4FF016F9134E14E2001447BA /* wdlstring.h in Headers */,
@@ -1382,8 +1378,7 @@
 				4F78DAB113B640470032E0F3 /* swell-menugen.h in Headers */,
 				4F78DAB213B640470032E0F3 /* swell-dlggen.h in Headers */,
 				4F78DAB313B640470032E0F3 /* swellappmain.h in Headers */,
-				4F78DA7713B640050032E0F3 /* resource.h in Headers */,
-				4F78DA7813B640050032E0F3 /* Wobbleizer.h in Headers */,
+				4F78DA7713B640050032E0F3 /* src in Headers */,
 				4F78DA8A13B640050032E0F3 /* mutex.h in Headers */,
 				4F78DA8B13B640050032E0F3 /* ptrlist.h in Headers */,
 				4F78DA8C13B640050032E0F3 /* wdlstring.h in Headers */,
@@ -1546,8 +1541,8 @@
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0620;
 				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 0710;
 			};
 			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "Wobbleizer" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1740,7 +1735,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F20EECB132C69FE0030E34C /* Wobbleizer.cpp in Sources */,
+				4F20EECB132C69FE0030E34C /* src in Sources */,
 				4FD16D1213B634BF001D0217 /* swell-gdi.mm in Sources */,
 				4F78D9BB13B63BA50032E0F3 /* IPlugBase.cpp in Sources */,
 				4F78D9BC13B63BA50032E0F3 /* IPlugStructs.cpp in Sources */,
@@ -1762,7 +1757,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F3AE1A312C0E5E2001FD7A4 /* Wobbleizer.cpp in Sources */,
+				4F3AE1A312C0E5E2001FD7A4 /* src in Sources */,
 				4FD16D0E13B634BF001D0217 /* swell-gdi.mm in Sources */,
 				4F78D94513B63BA50032E0F3 /* IPlugBase.cpp in Sources */,
 				4F78D94713B63BA50032E0F3 /* IPlugStructs.cpp in Sources */,
@@ -1786,7 +1781,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F7F5C4913E95EC8002918FD /* Wobbleizer.cpp in Sources */,
+				4F7F5C4913E95EC8002918FD /* src in Sources */,
 				4F7F5C5013E95EC8002918FD /* swell-gdi.mm in Sources */,
 				4F7F5C5113E95EC8002918FD /* IPlugBase.cpp in Sources */,
 				4F7F5C5213E95EC8002918FD /* IPlugStructs.cpp in Sources */,
@@ -1816,7 +1811,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F9828B6140A9EB700F3FCC1 /* Wobbleizer.cpp in Sources */,
+				4F9828B6140A9EB700F3FCC1 /* src in Sources */,
 				4F9828B7140A9EB700F3FCC1 /* swell-gdi.mm in Sources */,
 				4F9828B8140A9EB700F3FCC1 /* IPlugBase.cpp in Sources */,
 				4F9828B9140A9EB700F3FCC1 /* IPlugStructs.cpp in Sources */,
@@ -1855,7 +1850,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FB600181567CB0A0020189A /* Wobbleizer.cpp in Sources */,
+				4FB600181567CB0A0020189A /* src in Sources */,
 				4FB600191567CB0A0020189A /* swell-gdi.mm in Sources */,
 				4FB6001A1567CB0A0020189A /* IPlugBase.cpp in Sources */,
 				4FB6001B1567CB0A0020189A /* IPlugStructs.cpp in Sources */,
@@ -1905,10 +1900,8 @@
 				4F78D91413B63BA50032E0F3 /* IPopupMenu.cpp in Sources */,
 				4F78D91813B63BA50032E0F3 /* IParam.cpp in Sources */,
 				4F78D91913B63BA50032E0F3 /* IControl.cpp in Sources */,
-				4F78DA5A13B63F150032E0F3 /* Wobbleizer.cpp in Sources */,
-				4FD16CA213B6327D001D0217 /* app_main.cpp in Sources */,
-				4FD16CA313B6327D001D0217 /* app_dialog.cpp in Sources */,
-				4FB3624F13B648FE00DB6B76 /* main.mm in Sources */,
+				4F78DA5A13B63F150032E0F3 /* src in Sources */,
+				4FD16CA213B6327D001D0217 /* app_wrapper in Sources */,
 				4FDA440E13F3E4F2000B4551 /* IBitmapMonoText.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2017,21 +2010,34 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4FCF15AF133124D1009A6277 /* Wobbleizer.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_LOCATION = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				EXECUTABLE_EXTENSION = "";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = "$(DEBUG_OPTIMIZE)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = $IPLUG_PATH/IPlug_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "$(DEBUG_DEFS)";
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "$(COCOA_DEFS)";
 				GCC_VERSION = "$(COMPILER)";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_PKGINFO_FILE = YES;
 				HEADER_SEARCH_PATHS = (
@@ -2053,11 +2059,12 @@
 				PREBINDING = NO;
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
 				PRODUCT_NAME = "$(BINARY_NAME)";
-				SDKROOT = "$(BASE_SDK)";
+				SDKROOT = macosx10.5;
 				SKIP_INSTALL = NO;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "build-mac";
 				VALID_ARCHS = "i386 x86_64";
+				WDL_PATH = "$(SRCROOT)/../wdl-ol/WDL";
 				WRAPPER_EXTENSION = "";
 			};
 			name = Debug;
@@ -2066,12 +2073,20 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4FCF15AF133124D1009A6277 /* Wobbleizer.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_LOCATION = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				EXECUTABLE_EXTENSION = "";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = "$(RELEASE_OPTIMIZE)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = $IPLUG_PATH/IPlug_Prefix.pch;
@@ -2079,8 +2094,12 @@
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "$(COCOA_DEFS)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_VERSION = "$(COMPILER)";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_PKGINFO_FILE = YES;
 				GENERATE_PROFILING_CODE = "$(PROFILE)";
@@ -2102,10 +2121,11 @@
 				PREBINDING = NO;
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
 				PRODUCT_NAME = "$(BINARY_NAME)";
-				SDKROOT = "$(BASE_SDK)";
+				SDKROOT = macosx10.5;
 				SKIP_INSTALL = NO;
 				SYMROOT = "build-mac";
 				VALID_ARCHS = "i386 x86_64";
+				WDL_PATH = "$(SRCROOT)/../wdl-ol/WDL";
 				WRAPPER_EXTENSION = "";
 			};
 			name = Release;
@@ -2113,12 +2133,14 @@
 		4F20EF30132C69FE0030E34C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DSTROOT = "$(VST_FOLDER)";
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
 					"$(VST_DEFS)",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "resources/Wobbleizer-VST2-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DropSnorz.vst.${BINARY_NAME}";
 				SKIP_INSTALL = NO;
 				WARNING_CFLAGS = "-Wno-main";
 				WRAPPER_EXTENSION = vst;
@@ -2128,12 +2150,14 @@
 		4F20EF31132C69FE0030E34C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DSTROOT = "$(VST_FOLDER)";
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
 					"$(VST_DEFS)",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "resources/Wobbleizer-VST2-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DropSnorz.vst.${BINARY_NAME}";
 				SKIP_INSTALL = NO;
 				WARNING_CFLAGS = "-Wno-main";
 				WRAPPER_EXTENSION = vst;
@@ -2143,12 +2167,14 @@
 		4F20EF32132C69FE0030E34C /* Tracer */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DSTROOT = "$(VST_FOLDER)";
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
 					"$(VST_DEFS)",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "resources/Wobbleizer-VST2-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DropSnorz.vst.${BINARY_NAME}";
 				SKIP_INSTALL = NO;
 				WARNING_CFLAGS = "-Wno-main";
 				WRAPPER_EXTENSION = vst;
@@ -2158,6 +2184,7 @@
 		4F3AE1DD12C0E5E2001FD7A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DSTROOT = "$(AU_FOLDER)";
 				EXPORTED_SYMBOLS_FILE = Wobbleizer.exp;
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
@@ -2168,6 +2195,7 @@
 				OTHER_LDFLAGS = "-bundle";
 				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I $CA_SDK/AudioUnits/AUPublic/AUBase";
 				PREBINDING = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DropSnorz.audiounit.${BINARY_NAME}";
 				REZ_SEARCH_PATHS = (
 					/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers,
 					$CA_SDK/AudioUnits/AUPublic/AUBase,
@@ -2180,6 +2208,7 @@
 		4F3AE1DE12C0E5E2001FD7A4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DSTROOT = "$(AU_FOLDER)";
 				EXPORTED_SYMBOLS_FILE = Wobbleizer.exp;
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
@@ -2190,6 +2219,7 @@
 				OTHER_LDFLAGS = "-bundle";
 				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I $CA_SDK/AudioUnits/AUPublic/AUBase";
 				PREBINDING = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DropSnorz.audiounit.${BINARY_NAME}";
 				REZ_SEARCH_PATHS = (
 					/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers,
 					$CA_SDK/AudioUnits/AUPublic/AUBase,
@@ -2202,6 +2232,7 @@
 		4F3AE1DF12C0E5E2001FD7A4 /* Tracer */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DSTROOT = "$(AU_FOLDER)";
 				EXPORTED_SYMBOLS_FILE = Wobbleizer.exp;
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
@@ -2212,6 +2243,7 @@
 				OTHER_LDFLAGS = "-bundle";
 				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I $CA_SDK/AudioUnits/AUPublic/AUBase";
 				PREBINDING = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DropSnorz.audiounit.${BINARY_NAME}";
 				REZ_SEARCH_PATHS = (
 					/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers,
 					$CA_SDK/AudioUnits/AUPublic/AUBase,
@@ -2253,7 +2285,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4F7F5CAB13E9607A002918FD /* CommonDebugSettings.xcconfig */;
 			buildSettings = {
-				ARCHS = i386;
+				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
 				DSTROOT = "$(RTAS_FOLDER)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -2291,6 +2323,7 @@
 					"$(inherited)",
 					"\"-LlibPluginLibrary\"",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DropSnorz.rtas.${BINARY_NAME}";
 				SDKROOT = "$(BASE_SDK)";
 				SKIP_INSTALL = NO;
 				SYMROOT = "build-mac";
@@ -2307,7 +2340,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4F7F5CAC13E9607A002918FD /* CommonReleaseSettings.xcconfig */;
 			buildSettings = {
-				ARCHS = i386;
+				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
 				DEPLOYMENT_POSTPROCESSING = NO;
 				DSTROOT = "$(RTAS_FOLDER)";
@@ -2339,6 +2372,7 @@
 				OBJROOT = "build-mac";
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DropSnorz.rtas.${BINARY_NAME}";
 				SDKROOT = "$(BASE_SDK)";
 				SKIP_INSTALL = NO;
 				SYMROOT = "build-mac";
@@ -2355,7 +2389,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4F7F5CAC13E9607A002918FD /* CommonReleaseSettings.xcconfig */;
 			buildSettings = {
-				ARCHS = i386;
+				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
 				DSTROOT = "$(RTAS_FOLDER)";
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
@@ -2388,6 +2422,7 @@
 					"$(inherited)",
 					"\"-LlibPluginLibrary\"",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DropSnorz.rtas.${BINARY_NAME}";
 				SDKROOT = "$(BASE_SDK)";
 				SYMROOT = "build-mac";
 				VALID_ARCHS = i386;
@@ -2402,6 +2437,7 @@
 		4F9828DD140A9EB700F3FCC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DSTROOT = "$(VST3_FOLDER)";
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
 					"$(VST3_DEFS)",
@@ -2412,6 +2448,7 @@
 					"$(VST3_SDK)",
 				);
 				INFOPLIST_FILE = "resources/Wobbleizer-VST3-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DropSnorz.vst3.${BINARY_NAME}";
 				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = vst3;
 			};
@@ -2420,6 +2457,7 @@
 		4F9828DE140A9EB700F3FCC1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DSTROOT = "$(VST3_FOLDER)";
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
 					"$(VST3_DEFS)",
@@ -2430,6 +2468,7 @@
 					"$(VST3_SDK)",
 				);
 				INFOPLIST_FILE = "resources/Wobbleizer-VST3-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DropSnorz.vst3.${BINARY_NAME}";
 				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = vst3;
 			};
@@ -2438,6 +2477,7 @@
 		4F9828DF140A9EB700F3FCC1 /* Tracer */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DSTROOT = "$(VST3_FOLDER)";
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
 					"$(VST3_DEFS)",
@@ -2448,6 +2488,7 @@
 					"$(VST3_SDK)",
 				);
 				INFOPLIST_FILE = "resources/Wobbleizer-VST3-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DropSnorz.vst3.${BINARY_NAME}";
 				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = vst3;
 			};
@@ -2458,7 +2499,7 @@
 			baseConfigurationReference = 4F4CC38C1549B92900A9EA21 /* CommonDebugSettings.xcconfig */;
 			buildSettings = {
 				AAX_SDK_ROOT = "$(AAX_SDK)";
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
 				DSTROOT = "$(AAX_FOLDER)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2488,6 +2529,7 @@
 					"$(AAX_SDK)/Libs/Debug",
 				);
 				MACOSX_DEPLOYMENT_TARGET = "$(DEPLOYMENT_TARGET)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DropSnorz.aax.${BINARY_NAME}";
 				SDKROOT = "$(BASE_SDK)";
 				SKIP_INSTALL = NO;
 				WARNING_CFLAGS = (
@@ -2504,7 +2546,7 @@
 			baseConfigurationReference = 4F4CC38D1549B92900A9EA21 /* CommonReleaseSettings.xcconfig */;
 			buildSettings = {
 				AAX_SDK_ROOT = "$(AAX_SDK)";
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_LOCATION = YES;
 				DEPLOYMENT_POSTPROCESSING = NO;
@@ -2537,6 +2579,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = "$(DEPLOYMENT_TARGET)";
 				PREBINDING = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DropSnorz.aax.${BINARY_NAME}";
 				SDKROOT = "$(BASE_SDK)";
 				SKIP_INSTALL = NO;
 				WARNING_CFLAGS = (
@@ -2553,7 +2596,7 @@
 			baseConfigurationReference = 4F4CC38D1549B92900A9EA21 /* CommonReleaseSettings.xcconfig */;
 			buildSettings = {
 				AAX_SDK_ROOT = "$(AAX_SDK)";
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_LOCATION = YES;
 				DEPLOYMENT_POSTPROCESSING = NO;
@@ -2585,6 +2628,7 @@
 					"$(AAX_SDK)/Libs/Release",
 				);
 				MACOSX_DEPLOYMENT_TARGET = "$(DEPLOYMENT_TARGET)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DropSnorz.aax.${BINARY_NAME}";
 				SDKROOT = "$(BASE_SDK)";
 				SKIP_INSTALL = NO;
 				WARNING_CFLAGS = (
@@ -2598,7 +2642,9 @@
 		};
 		4FD16A0C13B63082001D0217 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F4CC38D1549B92900A9EA21 /* CommonReleaseSettings.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DSTROOT = "$(APP_FOLDER)";
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
 					"$(APP_DEFS)",
@@ -2616,6 +2662,7 @@
 					AppKit,
 				);
 				PREBINDING = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DropSnorz.standalone.${BINARY_NAME}";
 				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = app;
 			};
@@ -2624,6 +2671,7 @@
 		4FD16A0D13B63082001D0217 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DSTROOT = "$(APP_FOLDER)";
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
 					"$(APP_DEFS)",
@@ -2641,6 +2689,7 @@
 					AppKit,
 				);
 				PREBINDING = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DropSnorz.standalone.${BINARY_NAME}";
 				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = app;
 			};
@@ -2649,6 +2698,7 @@
 		4FD16A0E13B63082001D0217 /* Tracer */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DSTROOT = "$(APP_FOLDER)";
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
 					"$(APP_DEFS)",
@@ -2666,6 +2716,7 @@
 					AppKit,
 				);
 				PREBINDING = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DropSnorz.standalone.${BINARY_NAME}";
 				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = app;
 			};
@@ -2675,19 +2726,31 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4FCF15AF133124D1009A6277 /* Wobbleizer.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
 				DEPLOYMENT_LOCATION = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				EXECUTABLE_EXTENSION = "";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = "$(RELEASE_OPTIMIZE)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = $IPLUG_PATH/IPlug_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TRACER_DEFS)";
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "$(COCOA_DEFS)";
 				GCC_VERSION = "$(COMPILER)";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_PKGINFO_FILE = YES;
 				HEADER_SEARCH_PATHS = (
@@ -2708,10 +2771,11 @@
 				PREBINDING = NO;
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
 				PRODUCT_NAME = "$(BINARY_NAME)";
-				SDKROOT = "$(BASE_SDK)";
+				SDKROOT = macosx10.5;
 				SKIP_INSTALL = NO;
 				SYMROOT = "build-mac";
 				VALID_ARCHS = "i386 x86_64";
+				WDL_PATH = "$(SRCROOT)/../wdl-ol/WDL";
 				WRAPPER_EXTENSION = "";
 			};
 			name = Tracer;
