@@ -3,8 +3,6 @@
 #include "IControl.h"
 #include "resource.h"
 
-#include <thread>
-
 const int kNumPrograms = 1;
 
 enum EParams

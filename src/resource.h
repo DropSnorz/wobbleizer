@@ -4,7 +4,7 @@
 #define PLUG_CLASS_NAME Wobbleizer
 
 #define BUNDLE_MFR "DropSnorz"
-#define BUNDLE_NAME "WobbleIzer"
+#define BUNDLE_NAME "Wobbleizer"
 
 #define PLUG_ENTRY Wobbleizer_Entry
 #define PLUG_VIEW_ENTRY Wobbleizer_ViewEntry
@@ -34,8 +34,8 @@
   const int PLUG_TYPE_IDS_AS[2] = {'EFA1', 'EFA2'}; // AudioSuite
 #endif
 
-#define PLUG_MFR_PT "DropSnorz\nDropSnorz\nAcme"
-#define PLUG_NAME_PT "Wobbleizer\nIPEF"
+#define PLUG_MFR_PT "DropSnorz\nDropSnorz\nDropSnorz"
+#define PLUG_NAME_PT "Wobbleizer\nWobbleizer"
 #define PLUG_TYPE_PT "Effect"
 #define PLUG_DOES_AUDIOSUITE 1
 

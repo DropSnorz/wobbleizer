@@ -59,7 +59,7 @@ bool DebugPanelControl::IsDirty(){
 
 bool DebugPanelControl::Draw(IGraphics* pGraphics){
 
-	 __super::Draw(pGraphics);
+	 IBitmapOverlayControl::Draw(pGraphics);
 
 	 if (mValue < 0.5){
 		 //text->Draw(pGraphics);
