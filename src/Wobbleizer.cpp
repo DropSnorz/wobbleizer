@@ -187,7 +187,7 @@ Wobbleizer::Wobbleizer(IPlugInstanceInfo instanceInfo)
   IBitmap filtermodeBitmap = pGraphics->LoadIBitmap(SWITCH_FILTER_MODE_ID, SWITCH_FILTER_MODE_FN, 3);
   IBitmap knob = pGraphics->LoadIBitmap(KNOB_ID, KNOB_FN, kKnobFrames);
   IBitmap knob_29f = pGraphics->LoadIBitmap(KNOB_29F_ID, KNOB_29F_FN, 101);
-  IBitmap waveformBitmap = pGraphics->LoadIBitmap(SWITCH_WAVE_FORM_ID, SWITCH_FILTER_MODE_FN, 4);
+  IBitmap waveformBitmap = pGraphics->LoadIBitmap(SWITCH_WAVE_FORM_ID, SWITCH_WAVE_FORM_FN, 4);
   IBitmap metalSwitchBitmap = pGraphics->LoadIBitmap(METAL_SWITCH_ID, METAL_SWITCH_FN, 2);
   IBitmap tapButton = pGraphics->LoadIBitmap(TAP_BUTTON_ID, TAP_BUTTON_FN, 2);
   IBitmap knobOffset = pGraphics->LoadIBitmap(KNOB_OFFSET_ID, KNOB_OFFSET_FN, 101);

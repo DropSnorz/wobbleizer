@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${BINARY_NAME}</string>
 	<key>CFBundleGetInfoString</key>
-	<string>0.23.0, Copyright DropSnorz, 2017</string>
+	<string>0.23.2, Copyright DropSnorz, 2017</string>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -17,11 +17,11 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.23.0</string>
+	<string>0.23.2</string>
 	<key>CFBundleSignature</key>
 	<string>Acme</string>
 	<key>CFBundleVersion</key>
-	<string>0.23.0</string>
+	<string>0.23.2</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>10.5.0</string>
 	<key>NSPrincipalClass</key>
